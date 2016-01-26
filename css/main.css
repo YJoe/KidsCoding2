@@ -1,0 +1,17 @@
+/*Not sure this one is needed right now*/
+.item > .img{
+    margin-left: 100px;
+}
+
+/*All text*/
+.info{
+    color: black;
+}
+
+/*Carousel*/
+.carousel-inner > .item > img {
+    top: 0;
+    left: 0;
+    min-width: 10%;
+    height: 500px;
+}
