@@ -15,3 +15,8 @@
     min-width: 10%;
     height: 500px;
 }
+
+.pos_right {
+    position: relative;
+    left: 200px;
+}
