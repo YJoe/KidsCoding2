@@ -18,6 +18,31 @@
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js">
+</script>
+<script>
+    var myCenter=new google.maps.LatLng(51.445836, -0.963173);
+
+    function initialize()
+    {
+        var mapProp = {
+            center: myCenter,
+            zoom:10,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+        var marker = new google.maps.Marker({
+            position: myCenter,
+        });
+
+        marker.setMap(map);
+    }
+
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 
 
 <!--NAVIGATION BAR-->
@@ -54,7 +79,7 @@
     <!-- SECTION 1 -->
     <hr class="featurette-divider">
     <div class="row featurette">
-        <div class="col-md-7">
+        <div class="col-md-4">
             <h2 class="featurette-heading">Head Office</h2>
             <p class="lead">
                 Head office address and information <br />
@@ -64,8 +89,8 @@
 
 
         <!-- IMAGE -->
-        <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" src="../images/cat1.jpg" alt="First slide">
+        <div class="col-md-8">
+            <div id="googleMap" style="width:100%;height:380px;"></div>
         </div>
     </div>
     <hr class="featurette-divider">
@@ -79,7 +104,7 @@
                 <h2 class="featurette-heading">Reading school</h2>
                 <p class="lead">
                     Address: Erleigh Rd, Reading RG1 5LW<br />
-                    Phone:0118 901 5600<br />
+                    Phone: <a href="tel:+44118 901 5600">0118 901 5600</a><br />
                     Email: <a href="mailto:Steve_kidscoding@hotmail.com">Steve_kidscoding@hotmail.com</a>
                 </p>
             </div>
@@ -87,7 +112,7 @@
                 <h2 class="featurette-heading">St Josephs College</h2>
                 <p class="lead">
                     Address: Upper Redlands Rd, Reading RG1 5JT<br />
-                    Phone:0118 966 1000<br />
+                    Phone: <a href="tel:+44118 966 1000">0118 966 1000</a><br />
                     Email: <a href="mailto:Joe_kidscoding@hotmail.com">Joe_kidscoding@hotmail.com</a>
                 </p>
             </div>
@@ -95,7 +120,7 @@
                 <h2 class="featurette-heading">The Abbey school</h2>
                 <p class="lead">
                     Address: 17 Kendrick Rd, Reading RG1 5DZ<br />
-                    Phone:0118 987 2256<br />
+                    Phone: <a href="tel:+44118 987 2256">0118 987 2256</a><br />
                     Email: <a href="mailto:Amy_kidscoding@hotmail.com">Amy_kidscoding@hotmail.com</a>
                 </p>
             </div>
@@ -103,8 +128,24 @@
                 <h2 class="featurette-heading">Queen Anne’s School</h2>
                 <p class="lead">
                     Address: 6 Henley Rd, Reading, West Berkshire RG4 6DX<br />
-                    Phone:0118 918 7300<br />
+                    Phone: <a href="tel:+44118 918 7300">0118 918 7300</a><br />
                     Email: <a href="mailto:John_kidscoding@hotmail.com">John_kidscoding@hotmail.com</a>
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h2 class="featurette-heading">Little Heath School</h2>
+                <p class="lead">
+                    Address: Little Heath Rd, Reading, West Berkshire RG31 5TY
+                    Phone: <a href="tel:+44118 942 7337">0118 942 7337</a><br />
+                    Email: <a href="mailto:Lorraine_kidscoding@hotmail.com">Lorraine_kidscoding@hotmail.com</a>
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h2 class="featurette-heading">University of Reading School of Systems Engineering</h2>
+                <p class="lead">
+                    Address: University of Reading, Whiteknights, Reading, Berkshire RG6 6AY
+                    Phone: <a href="tel:+44118 378 7565">0118 378 7565</a><br />
+                    Email: <a href="mailto:Billy_kidscoding@hotmail.com">Billy_kidscoding@hotmail.com</a>
                 </p>
             </div>
         </div>
