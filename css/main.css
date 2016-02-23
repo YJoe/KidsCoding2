@@ -15,16 +15,19 @@ body {
 
 .bodyText{
     font-family: "Arial";
+    font-size: 16px;
     color: #395653;
 }
 
 .headingText{
     font-family: "Arial";
+    font-size: 40px;
     color: #f69e3f;
 }
 
 .subHeadingText{
     font-family: "Arial";
+    font-size: 20px;
     color: #f69e3f;
 }
 /*Carousel*/
