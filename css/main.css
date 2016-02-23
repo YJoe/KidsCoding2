@@ -3,25 +3,34 @@
     margin-left: 100px;
 }
 
+body {
+    background-color: #395653;
+    margin:0 auto;
+}
+
 /*All text*/
 .info{
     color: black;
 }
 
 .menuText{
-    font-family: "Cooper Black";
+    font-family: "Arial";
+    color: #f69e3f;
 }
 
 .bodyText{
-    font-family: "Cooper Black";
+    font-family: "Arial";
+    color: #f69e3f;
 }
 
 .headingText{
-    font-family: "Cooper Black";
+    font-family: "Arial";
+    color: #f69e3f;
 }
 
 .subHeadingText{
-    font-family: "Cooper Black";
+    font-family: "Arial";
+    color: #f69e3f;
 }
 /*Carousel*/
 .carousel-inner > .item > img {
