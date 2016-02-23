@@ -27,17 +27,39 @@
     {
         var mapProp = {
             center: myCenter,
-            zoom:10,
+            zoom:12,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
         var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
-        var marker = new google.maps.Marker({
-            position: myCenter,
+        addMarker(51.450773, -0.956063, map);
+
+        addMarker(51.446636, -0.948292, map);
+
+        addMarker(51.448575, -0.963856, map);
+
+        addMarker(51.471171, -0.964309, map);
+
+        addMarker(51.457729, -1.057611, map);
+
+        addMarker(51.441749, -0.947975, map);
+
+    }
+
+    function addMarker(x, y, map){
+        var markerSchool1 = new google.maps.Marker({
+            position: new google.maps.LatLng(x, y),
         });
 
-        marker.setMap(map);
+        markerSchool1.setMap(map);
+        var infowindow = new google.maps.InfoWindow({
+            content:"Hello World!"
+        });
+
+        google.maps.event.addListener(markerSchool1, 'click', function() {
+            infowindow.open(map,markerSchool1);
+        });
     }
 
 
@@ -100,15 +122,15 @@
     <div>
         <h2 class="featurette-heading">Other Locations</h2>
         <div class="row featurette">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <h2 class="featurette-heading">Reading school</h2>
                 <p class="lead">
-                    Address: Erleigh Rd, Reading RG1 5LW<br />
+                    Address: 7 Erleigh Rd, Reading RG1 5LW<br />
                     Phone: <a href="tel:+44118 901 5600">0118 901 5600</a><br />
                     Email: <a href="mailto:Steve_kidscoding@hotmail.com">Steve_kidscoding@hotmail.com</a>
                 </p>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <h2 class="featurette-heading">St Josephs College</h2>
                 <p class="lead">
                     Address: Upper Redlands Rd, Reading RG1 5JT<br />
@@ -116,7 +138,7 @@
                     Email: <a href="mailto:Joe_kidscoding@hotmail.com">Joe_kidscoding@hotmail.com</a>
                 </p>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <h2 class="featurette-heading">The Abbey school</h2>
                 <p class="lead">
                     Address: 17 Kendrick Rd, Reading RG1 5DZ<br />
@@ -124,7 +146,7 @@
                     Email: <a href="mailto:Amy_kidscoding@hotmail.com">Amy_kidscoding@hotmail.com</a>
                 </p>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <h2 class="featurette-heading">Queen Anne’s School</h2>
                 <p class="lead">
                     Address: 6 Henley Rd, Reading, West Berkshire RG4 6DX<br />
@@ -132,18 +154,18 @@
                     Email: <a href="mailto:John_kidscoding@hotmail.com">John_kidscoding@hotmail.com</a>
                 </p>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <h2 class="featurette-heading">Little Heath School</h2>
                 <p class="lead">
-                    Address: Little Heath Rd, Reading, West Berkshire RG31 5TY
+                    Address: Little Heath Rd, Reading, West Berkshire RG31 5TY<br />
                     Phone: <a href="tel:+44118 942 7337">0118 942 7337</a><br />
                     Email: <a href="mailto:Lorraine_kidscoding@hotmail.com">Lorraine_kidscoding@hotmail.com</a>
                 </p>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <h2 class="featurette-heading">University of Reading School of Systems Engineering</h2>
                 <p class="lead">
-                    Address: University of Reading, Whiteknights, Reading, Berkshire RG6 6AY
+                    Address: University of Reading, Whiteknights, Reading, Berkshire RG6 6AY<br />
                     Phone: <a href="tel:+44118 378 7565">0118 378 7565</a><br />
                     Email: <a href="mailto:Billy_kidscoding@hotmail.com">Billy_kidscoding@hotmail.com</a>
                 </p>
