@@ -8,6 +8,10 @@
     color: black;
 }
 
+.menuText{
+    font-family: "Cooper Black";
+}
+
 /*Carousel*/
 .carousel-inner > .item > img {
     top: 0;
