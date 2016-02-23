@@ -16,6 +16,13 @@
     font-family: "Cooper Black";
 }
 
+.headingText{
+    font-family: "Cooper Black";
+}
+
+.subHeadingText{
+    font-family: "Cooper Black";
+}
 /*Carousel*/
 .carousel-inner > .item > img {
     top: 0;
