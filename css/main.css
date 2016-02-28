@@ -8,6 +8,10 @@ body {
     margin:0 auto;
 }
 
+.featurette-divider {
+    border: 2px solid #395653;
+}
+
 .menuText{
     font-family: "Arial";
     color: #000000;
