@@ -36,17 +36,37 @@ body {
     color: #f69e3f;
 }
 /*Carousel*/
-.carousel-inner > .item > img {
+.carousel-inner {
+    margin-bottom:50px;
+}
+
+.carousel-indicators {
+    bottom:-50px;
+}
+
+.carousel-caption {
+    bottom: -7%;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
+
+.carousel-inner .item > img {
     top: 0;
     left: 0;
     min-width: 10%;
     height: 500px;
 }
 
+
+
+
 .pos_right {
     position: relative;
     left: 0px;
 }
+
 
 .form {
     margin: 0 auto;
