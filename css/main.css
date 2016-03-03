@@ -63,6 +63,18 @@ body {
     left: 0px;
 }
 
+.pic_left {
+    float: left;
+    width: 270px;
+}
+
+.pic_right {
+    float: right;
+    width: 270px;
+}
+
+
+
 .form {
     margin: 0 auto;
     width:600px;
