@@ -21,123 +21,84 @@
             border-width: 1px;
         }
     </style>
+    <script>
+        $(function(){
+            $("#navbar").load("Navbar.html");
+        });
+    </script>
 </head>
 <body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <div id="navbar"></div>
 
 
-<!--NAVIGATION BAR-->
-<nav class="navbar navbar-default">
+
+    <!--CAROUSEL-->
     <div class="container marketing">
-        <div class="navbar-header">
-            <a class="navbar-btn pull-left" href="#">
-                <img style="margin-right: 10px;" src='../images/logo.png' width='24' height='30'>
+        <div class = "box">
+            <h2 class="pos_right headingText"> Mission statement</h2>
+        </div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img class="img-responsive center-block" src="../images/kids.jpg" alt="First slide" >
+                </div>
+
+                <div class="item">
+                    <img class="img-responsive center-block" src="../images/laptop_code.jpg" alt="Second slide">
+                </div>
+
+                <div class="item">
+                    <img class="img-responsive center-block" src="../images/kid_ipad.jpg" alt="Third slide">
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only bodyText">Previous</span>
             </a>
-            <a class= "navbar-brand menuText" href ="#">KidsCoding</a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li class="active menuText"><a href="Home.html">Home</a></li>
-            <li class="menuText"><a href="AboutUs.html">About Us</a></li>
-            <li class="menuText"><a href="Donate.html">Donate</a></li>
-            <li class="menuText"><a href="Volunteer.html">Volunteer</a></li>
-            <li class="menuText"><a href="Contact.html">Contact</a></li>
-        </ul>
 
-        <!-- SEARCH BAR -->
-        <form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-                <input type="text" class="form-control menuText" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default menuText">Submit</button>
-        </form>
-
-        <!-- SOCIAL LINKS -->
-        <!-- Facebook -->
-        <div class="item">
-            <div>
-                <a class="navbar-brand navbar-right" href="https://www.facebook.com/Kids-Coding-129438124082150/" title="caption">
-                    <img style="margin-top: -7px;" src="../images/facebook.png"  width='34' height='34'/>
-                </a>
-            </div>
-        </div>
-        <!-- Twitter -->
-        <div class="item">
-            <div>
-                <a class="navbar-brand navbar-right" href="https://www.facebook.com/Kids-Coding-129438124082150/" title="caption">
-                    <img style="margin-right: 5px; margin-top: -7px;" src="../images/twitter.png"  width='34' height='34'/>
-                </a>
-            </div>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only bodyText">Next</span>
+            </a>
         </div>
 
+
+        <!--IMAGE AND TEXT-->
+        <div class = "box" style = "margin-top: 20px">
+            <!-- START THE FEATURETTES -->
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading subHeadingText">What we do</h2>
+                    <p class="lead bodyText">
+                        Kids coding provides children with the ability to be a part of an
+                        exciting and fast growing industry. Based in Reading, possibly the
+                        best location in the country for technology related careers, we
+                        hope to open up channels for young people in the area to communicate
+                        with these businesses and maybe even secure jobs for them in future.
+                        If we can gain enough momentum, we may be able to set up workshops
+                        with these firms which will give the students opportunities to see
+                        how the skills they have been honing can be applied to the real world.
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img class="featurette-image img-responsive center-block boarder" src="../images/laptop_code2.jpg" alt="First slide">
+                </div>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+
+        <!-- FOOTER -->
+        <footer>
+            <p class="pull-right bodyText"><a href="#">Back to top</a></p>
+            <p class="bodyText">© 2016 KidsCoding. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        </footer>
 
     </div>
-</nav>
-
-<!--CAROUSEL-->
-<div class="container marketing">
-    <div class = "box">
-        <h2 class="pos_right headingText"> Mission statement</h2>
-    </div>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img class="img-responsive center-block" src="../images/kids.jpg" alt="First slide" >
-            </div>
-
-            <div class="item">
-                <img class="img-responsive center-block" src="../images/laptop_code.jpg" alt="Second slide">
-            </div>
-
-            <div class="item">
-                <img class="img-responsive center-block" src="../images/kid_ipad.jpg" alt="Third slide">
-            </div>
-        </div>
-
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only bodyText">Previous</span>
-        </a>
-
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only bodyText">Next</span>
-        </a>
-    </div>
-
-
-    <!--IMAGE AND TEXT-->
-    <div class = "box" style = "margin-top: 20px">
-        <!-- START THE FEATURETTES -->
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading subHeadingText">What we do</h2>
-                <p class="lead bodyText">
-                    Kids coding provides children with the ability to be a part of an
-                    exciting and fast growing industry. Based in Reading, possibly the
-                    best location in the country for technology related careers, we
-                    hope to open up channels for young people in the area to communicate
-                    with these businesses and maybe even secure jobs for them in future.
-                    If we can gain enough momentum, we may be able to set up workshops
-                    with these firms which will give the students opportunities to see
-                    how the skills they have been honing can be applied to the real world.
-                </p>
-            </div>
-            <div class="col-md-5">
-                <img class="featurette-image img-responsive center-block boarder" src="../images/laptop_code2.jpg" alt="First slide">
-            </div>
-        </div>
-    </div>
-    <hr class="featurette-divider">
-
-    <!-- FOOTER -->
-    <footer>
-        <p class="pull-right bodyText"><a href="#">Back to top</a></p>
-        <p class="bodyText">© 2016 KidsCoding. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-    </footer>
-
-</div>
 </body>
 </html>
