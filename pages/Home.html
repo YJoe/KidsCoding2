@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
     <title>KidsCoding</title>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap - css -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Our own CSS-->
@@ -15,21 +16,47 @@
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
     <style>
         img.boarder {
             border-style: solid;
             border-width: 1px;
         }
     </style>
+
+    <!-- NAVBAR-->
     <script>
-        $(function(){
-            $("#navbar").load("Navbar.html");
+        $(function() {
+            var mynavbar = $("#navbar"); //cache it
+            $.get("Navbar.html")
+                    .done(function( data ) {
+                        mynavbar.html(data);
+                        // remove any current active if found in markup:
+                        mynavbar.find('ul.nav li').removeClass('active');
+
+                        var url = window.location;// get location
+
+                        // add the active class to current url detected href
+                        // Will work for absolute hrefs, might have to adjust for others
+                        mynavbar.find('ul.nav li').find('a').filter(function() {
+                            return (url.indexOf(this.href) != -1);
+                        }).parent().addClass('active');
+                    });
+            // put the click handler for the navigation in place
+            mynavbar.on('click', 'ul.nav li', function() {
+                var myhref = $(this).find('a').attr('href');
+                alert("proceed to: " + myhref);
+                window.location = myhref;
+            });
         });
     </script>
 </head>
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+
 
     <div id="navbar"></div>
 
