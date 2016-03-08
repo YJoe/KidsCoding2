@@ -28,7 +28,7 @@ function initialize()
 
     var icon = {
         url: '../images/location_icon.png',
-        scaledSize: new google.maps.Size(70, 50) // scaled size
+        scaledSize: new google.maps.Size(50, 50) // scaled size
     };
 
     //Head office Marker
