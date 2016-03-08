@@ -4,12 +4,18 @@
 }
 
 body {
-    background-color: #eeeeee;
+    background-color: #ffffff;
     margin:0 auto;
 }
 
 .featurette-divider {
     border: 1px solid #395653;
+}
+
+.box{
+    margin-top: 20px;
+    background-color: #eeeeee;
+    box-shadow: 0px 3px 5px 1px silver;
 }
 
 .menuText{
@@ -18,29 +24,28 @@ body {
 }
 
 .bodyText{
+    margin: 30px;
     font-family: "Arial";
     font-size: 16px;
     color: #395653;
 }
 
 .headingText{
+    margin: 30px;
     font-family: "Arial";
     font-size: 40px;
     color: #f69e3f;
 }
 
 .subHeadingText{
+    margin: 30px;
     font-family: "Arial";
     font-size: 20px;
     color: #f69e3f;
 }
 /*Carousel*/
 .carousel-inner {
-    margin-bottom:50px;
-}
-
-.carousel-indicators {
-    bottom:-50px;
+    margin-bottom:0px;
 }
 
 .carousel-caption {
