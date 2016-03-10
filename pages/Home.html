@@ -18,13 +18,6 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-    <style>
-        img.boarder {
-            border-style: solid;
-            border-width: 1px;
-        }
-    </style>
-
     <!-- NAVBAR-->
     <script src="../js/active.js">
     </script>
@@ -37,45 +30,44 @@
 
     <div id="navbar"></div>
 
-
-
     <!--CAROUSEL-->
     <div class="container marketing">
         <div class = "box">
-            <h2 class="pos_right headingText"> Mission statement</h2>
-        </div>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img class="img-responsive center-block" src="../images/kids.jpg" alt="First slide" title="Children learning" >
+            <h2 class="pos_right headingText">Home</h2>
+            <hr class="featurette-divider featurette-divider-color">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img class="img-responsive center-block" src="../images/kids.jpg" alt="First slide" title="Children learning" >
+                    </div>
+
+                    <div class="item">
+                        <img class="img-responsive center-block" src="../images/laptop_code.jpg" alt="Second slide" title="Children learning" >
+                    </div>
+
+                    <div class="item">
+                        <img class="img-responsive center-block" src="../images/kid_ipad.jpg" alt="Third slide" title="Children learning" >
+                    </div>
                 </div>
 
-                <div class="item">
-                    <img class="img-responsive center-block" src="../images/laptop_code.jpg" alt="Second slide" title="Children learning" >
-                </div>
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only bodyText">Previous</span>
+                </a>
 
-                <div class="item">
-                    <img class="img-responsive center-block" src="../images/kid_ipad.jpg" alt="Third slide" title="Children learning" >
-                </div>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only bodyText">Next</span>
+                </a>
             </div>
 
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only bodyText">Previous</span>
-            </a>
 
-            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only bodyText">Next</span>
-            </a>
-        </div>
+            <hr class="featurette-divider featurette-divider-color">
 
 
-        <!--IMAGE AND TEXT-->
-        <div class = "box" style = "margin-top: 20px">
-            <!-- START THE FEATURETTES -->
+            <!--IMAGE AND TEXT-->
             <div class="row featurette">
                 <div class="col-md-7">
                     <h2 class="featurette-heading subHeadingText">What we do</h2>
@@ -94,15 +86,14 @@
                     <img class="featurette-image img-responsive center-block boarder" src="../images/laptop_code2.jpg" title="Children learning" >
                 </div>
             </div>
+            <hr class="featurette-divider">
+
+            <!-- FOOTER -->
+            <footer>
+                <p class="pull-right bodyText"><a href="#">Back to top</a></p>
+                <p class="bodyText">© 2016 KidsCoding. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+            </footer>
         </div>
-        <hr class="featurette-divider">
-
-        <!-- FOOTER -->
-        <footer>
-            <p class="pull-right bodyText"><a href="#">Back to top</a></p>
-            <p class="bodyText">© 2016 KidsCoding. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-        </footer>
-
     </div>
 </body>
 </html>

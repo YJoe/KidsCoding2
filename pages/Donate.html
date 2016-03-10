@@ -40,135 +40,142 @@
 
     <div id="navbar"></div>
 
-
     <div class = "container marketing">
         <div class = "box">
             <h2 class="pos_right headingText">Donate</h2>
-        </div>
-        <div class="col-md-5">
-            <h2 class="featurette-heading subHeadingText">Why Donate</h2>
-            <p class="lead bodyText">
-                Help us give children the opportunity to learn a new skill in a fun and safe environment.
-                A donation from you helps the charity grow and set up more locations and so allows more
-                and more children to join the experience. If you are a member of a company that is interested
-                in working with us to train the next generation, get in touch with us using the information below
-                and see if we can arrange a date.
-            </p>
-            <p class="bodyText">
-                Business Email: <a href="mailto:KC.enquiries@homail.com">KC.enquiries@homail.com</a>
-            </p>
-            <p class="bodyText">
-                Phone: <a href="tel:+44118 872 2345">0118 872 2345</a><br />
-            </p>
-            <img class="featurette-image img-responsive center-block boarder" src="../images/kids2.jpg" alt="Child prorgamming">
-        </div>
-        <div class="col-md-7">
-            <form id="productForm" method="post" class="form-horizontal">
-                <div class="form-group">
-                    <label class="col-xs-3 control-label">Title</label>
-                    <div class="col-xs-6 selectContainer">
-                        <select class="form-control" name="title">
-                            <option>Title</option>
-                            <option>Mr</option>
-                            <option>Miss</option>
-                            <option>Mrs</option>
-                            <option>Ms</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-xs-3 control-label">Name</label>
-                    <div class="col-xs-6">
-                        <input type="text" class="form-control" name="name" />
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-xs-3 control-label">Donation Message</label>
-                    <div class="col-xs-6">
-                        <textarea name="message" class="form-control" rows="3"></textarea>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-xs-3 control-label">Donation Amount</label>
-                    <div class="col-xs-6 inputGroupContainer">
-                        <div class="input-group">
-                            <input type="text" class="form-control" name="amount" />
-                            <span class="input-group-addon">£</span>
+            <hr class="featurette-divider featurette-divider-color">
+            <div class="col-md-6">
+                <h2 class="featurette-heading subHeadingText">Why Donate</h2>
+                <p class="lead bodyText">
+                    Help us give children the opportunity to learn a new skill in a fun and safe environment.
+                    A donation from you helps the charity grow and set up more locations and so allows more
+                    and more children to join the experience. If you are a member of a company that is interested
+                    in working with us to train the next generation, get in touch with us using the information below
+                    and see if we can arrange a date.
+                </p>
+                <p class="bodyText">
+                    Business Email: <a href="mailto:KC.enquiries@homail.com">KC.enquiries@homail.com</a>
+                </p>
+                <p class="bodyText">
+                    Phone: <a href="tel:+44118 872 2345">0118 872 2345</a><br />
+                </p>
+                <!-- LIKE WHAT??????
+                <img class="featurette-image img-responsive center-block boarder" src="../images/kids2.jpg" alt="Child prorgamming">
+                -->
+            </div>
+            <div class="col-md-6">
+                <form id="productForm" method="post" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label">Title</label>
+                        <div class="col-xs-6 selectContainer">
+                            <select class="form-control" name="title">
+                                <option>Title</option>
+                                <option>Mr</option>
+                                <option>Miss</option>
+                                <option>Mrs</option>
+                                <option>Ms</option>
+                            </select>
                         </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <div id="content">
-                        <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-                            <li class="active"><a href="#cred" data-toggle="tab">Credit/Debit</a></li>
-                            <li><a href="#pay" data-toggle="tab">PayPal</a></li>
-                        </ul>
-                        <br/>
-                        <!--CARD LAYOUT-->
-                        <div id="my-tab-content" class="tab-content">
-                            <div class="tab-pane active" id="cred">
-                                <!--CARD HOLDER NAME-->
-                                <div class="form-group">
-                                    <label class="col-xs-3 control-label">Card holder name</label>
-                                    <div class="col-xs-6">
-                                        <input type="text" class="form-control" name="name" />
-                                    </div>
-                                </div>
-                                <!--CARD NUMBER-->
-                                <div class="form-group">
-                                    <label class="col-xs-3 control-label">Card number</label>
-                                    <div class="col-xs-6">
-                                        <input type="text" class="form-control" name="name" />
-                                    </div>
-                                </div>
-                                <!--EXPIRATION DATE-->
-                                <div class="form-group">
-                                    <label class="col-xs-3 control-label">Expiration date</label>
-                                    <div class="col-xs-6">
-                                        <input type="text" class="form-control" name="name" />
-                                    </div>
-                                </div>
-                                <!--CVC NUMBER-->
-                                <div class="form-group">
-                                    <label class="col-xs-3 control-label">CVC number</label>
-                                    <div class="col-xs-6">
-                                        <input type="text" class="form-control" name="name" />
-                                    </div>
-                                </div>
-                            </div>
-                            <!--PAY PAL LAYOUT-->
-                            <div class="tab-pane" id="pay">
-                                <!--PAYPAL ACCOUNT-->
-                                <div class="form-group">
-                                    <label class="col-xs-3 control-label">Account name</label>
-                                    <div class="col-xs-6">
-                                        <input type="text" class="form-control" name="name" />
-                                    </div>
-                                </div>
-                                <!--PAYPAL PASSWORD-->
-                                <div class="form-group">
-                                    <label class="col-xs-3 control-label">Password</label>
-                                    <div class="col-xs-6">
-                                        <input type="password" class="form-control" name="name" />
-                                    </div>
-                                </div>
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label">Name</label>
+                        <div class="col-xs-6">
+                            <input type="text" class="form-control" name="name" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label">Donation Message</label>
+                        <div class="col-xs-6">
+                            <textarea name="message" class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label">Donation Amount</label>
+                        <div class="col-xs-6 inputGroupContainer">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="amount" />
+                                <span class="input-group-addon">£</span>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <div class="col-xs-5 col-xs-offset-3">
-                        <button type="submit" class="btn btn-default">Donate</button>
-                        <input type="checkbox" name="name" />I am over 18</input>
+                    <div class="form-group">
+                        <div id="content">
+                            <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                                <li class="active"><a href="#cred" data-toggle="tab">Credit/Debit</a></li>
+                                <li><a href="#pay" data-toggle="tab">PayPal</a></li>
+                            </ul>
+                            <br/>
+                            <!--CARD LAYOUT-->
+                            <div id="my-tab-content" class="tab-content">
+                                <div class="tab-pane active" id="cred">
+                                    <!--CARD HOLDER NAME-->
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label">Card holder name</label>
+                                        <div class="col-xs-6">
+                                            <input type="text" class="form-control" name="name" />
+                                        </div>
+                                    </div>
+                                    <!--CARD NUMBER-->
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label">Card number</label>
+                                        <div class="col-xs-6">
+                                            <input type="text" class="form-control" name="name" />
+                                        </div>
+                                    </div>
+                                    <!--EXPIRATION DATE-->
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label">Expiration date</label>
+                                        <div class="col-xs-6">
+                                            <input type="text" class="form-control" name="name" />
+                                        </div>
+                                    </div>
+                                    <!--CVC NUMBER-->
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label">CVC number</label>
+                                        <div class="col-xs-6">
+                                            <input type="text" class="form-control" name="name" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--PAY PAL LAYOUT-->
+                                <div class="tab-pane" id="pay">
+                                    <!--PAYPAL ACCOUNT-->
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label">Account name</label>
+                                        <div class="col-xs-6">
+                                            <input type="text" class="form-control" name="name" />
+                                        </div>
+                                    </div>
+                                    <!--PAYPAL PASSWORD-->
+                                    <div class="form-group">
+                                        <label class="col-xs-3 control-label">Password</label>
+                                        <div class="col-xs-6">
+                                            <input type="password" class="form-control" name="name" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-            </form>
+                    <div class="form-group">
+                        <div class="col-xs-5 col-xs-offset-3">
+                            <button type="submit" class="btn btn-default">Donate</button>
+                            <input type="checkbox" name="name" />I am over 18</input>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <hr class="featurette-divider featurette-divider-color">
+            <!-- FOOTER -->
+            <footer>
+                <p class="pull-right bodyText"><a href="#">Back to top</a></p>
+                <p class = bodyText>© 2016 KidsCoding. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+            </footer>
         </div>
     </div>
 
