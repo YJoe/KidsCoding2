@@ -26,30 +26,7 @@
     </style>
 
     <!-- NAVBAR-->
-    <script>
-        $(function() {
-            var mynavbar = $("#navbar"); //cache it
-            $.get("Navbar.html")
-                    .done(function( data ) {
-                        mynavbar.html(data);
-                        // remove any current active if found in markup:
-                        mynavbar.find('ul.nav li').removeClass('active');
-
-                        var url = window.location;// get location
-
-                        // add the active class to current url detected href
-                        // Will work for absolute hrefs, might have to adjust for others
-                        mynavbar.find('ul.nav li').find('a').filter(function() {
-                            return (url.indexOf(this.href) != -1);
-                        }).parent().addClass('active');
-                    });
-            // put the click handler for the navigation in place
-            mynavbar.on('click', 'ul.nav li', function() {
-                var myhref = $(this).find('a').attr('href');
-                alert("proceed to: " + myhref);
-                window.location = myhref;
-            });
-        });
+    <script src="../js/active.js">
     </script>
 </head>
 <body>
@@ -71,15 +48,15 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img class="img-responsive center-block" src="../images/kids.jpg" alt="First slide" >
+                    <img class="img-responsive center-block" src="../images/kids.jpg" alt="First slide" title="Children learning" >
                 </div>
 
                 <div class="item">
-                    <img class="img-responsive center-block" src="../images/laptop_code.jpg" alt="Second slide">
+                    <img class="img-responsive center-block" src="../images/laptop_code.jpg" alt="Second slide" title="Children learning" >
                 </div>
 
                 <div class="item">
-                    <img class="img-responsive center-block" src="../images/kid_ipad.jpg" alt="Third slide">
+                    <img class="img-responsive center-block" src="../images/kid_ipad.jpg" alt="Third slide" title="Children learning" >
                 </div>
             </div>
 
@@ -114,7 +91,7 @@
                     </p>
                 </div>
                 <div class="col-md-5">
-                    <img class="featurette-image img-responsive center-block boarder" src="../images/laptop_code2.jpg" alt="First slide">
+                    <img class="featurette-image img-responsive center-block boarder" src="../images/laptop_code2.jpg" title="Children learning" >
                 </div>
             </div>
         </div>
