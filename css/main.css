@@ -8,14 +8,28 @@ body {
     border: 1px solid #395653;
 }
 
+.navbox{
+    margin: 0;
+    background-color: #65bfcc;
+    height: 50px;
+}
+
+.bottomBox{
+    margin: 0;
+    background-color: #395653;
+    height: 25px;
+}
+
 .box{
     margin-bottom: 20px;
-    background-color: #eeeeee;
+    background-color: #fbfbfb;
+    opacity: 1;
     box-shadow: 0px 3px 5px 1px silver;
 }
 
 .menuText{
     font-family: "Arial";
+    font-size: 18px;
     color: #000000;
 }
 
@@ -24,10 +38,21 @@ img.boarder {
     border-width: 1px;
 }
 
+@font-face {
+    font-family : "Roboto";
+    src: url("../fonts/Roboto-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+
 .bodyText{
     margin: 30px;
     margin-top: 0;
-    font-family: "Arial";
+    font-family: "Roboto";
+    text-align: justify;
     font-size: 16px;
     color: #395653;
     display: inline-block;
@@ -36,17 +61,17 @@ img.boarder {
 .headingText{
     margin-left: 30px;
     margin-right: 30px;
-    font-family: "Arial";
+    font-family: "Roboto-Bold";
     font-size: 40px;
-    color: #f69e3f;
+    color:  #65bfcc;
     display: inline-block;
 }
 
 .subHeadingText{
     margin: 30px;
-    font-family: "Arial";
+    font-family: "Roboto-Bold";
     font-size: 20px;
-    color: #f69e3f;
+    color: #65bfcc;
     display: inline-block;
 }
 /*Carousel*/
