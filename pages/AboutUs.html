@@ -18,11 +18,35 @@
 
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 
+    <script>window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function(f) {
+            t._e.push(f);
+        };
+
+        return t;
+    }(document, "script", "twitter-wjs"));</script>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(function(){
+            $("#footer").load("footer.html");
+        });
+    </script>
+
     <!-- NAVBAR-->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="../js/active.js"></script>
 </head>
-<body>
+<body background="../images/logo-big.png" style = "background-repeat: no-repeat;background-attachment: fixed; background-position: bottom right; ">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 
@@ -31,45 +55,57 @@
     <!--TEXT-->
     <div class="container marketing">
         <div class = "box">
-            <h2 class="pos_right headingText"> Mission statement</h2>
-            <hr class="featurette-divider featurette-divider-color">
-            <div class ="col-md-6">
-                <p class = "bodyText">Kids Coding is a charity that was set up in early 2014 ins
-                    central Reading and aims to provide local children (aged 9-14) with free access
-                    to after- school clubs where they can learn the foundations of computer programming.
-                </p>
-                <p class = "bodyText">These clubs are run by our enthusiastic volunteers and managed
-                    by our employees who encourage the kids to aim high and be creative, as well as
-                    providing them with a new, sought after skill at an early age the sessions improve
-                    the children’s confidence and give them a greater connection with an ever changing
-                    world, and potentially a new, useful hobby.
-                </p>
-                <p class = "bodyText">Kids Coding run their ‘coding clubs’ at local schools. The schools
-                    provide the resources which are key to the children's learning. To sign up your
-                    school click here.
-                </p>
-                <p class = "bodyText">As Kids Coding rely on the generous donations from people like you.
-                    Even a small contribution can help build a child’s future.
-                </p>
-                <p class = "bodyText">To follow us more visit our newsletter, facebook page or twitter page.
-                </p>
+            <img class="img-responsive center-block" src="../images/kids2_stretch.png" alt="First slide" title="Children learning" >
+            <h2 class = "subHeadingText">What we do</h2>
+            <p class = "bodyText">Kids Coding is a charity that was set up in early 2014 ins
+                central Reading and aims to provide local children (aged 9-14) with free access
+                to after- school clubs where they can learn the foundations of computer programming.
+            </p>
+            <p class = "bodyText">These clubs are run by our enthusiastic volunteers and managed
+                by our employees who encourage the kids to aim high and be creative, as well as
+                providing them with a new, sought after skill at an early age the sessions improve
+                the children’s confidence and give them a greater connection with an ever changing
+                world, and potentially a new, useful hobby.
+            </p>
+            <div style="background-color: #64d3db;">
+                <div class="row featurette">
+                    <div class="col-xs-6">
+                        <div class = "box" style="background-color: #fbfbfb; margin: 30px; box-shadow: 10px 10px 5px #417a82;">
+                            <p class="subHeadingText" style = "text-align: center; display: inline-block">Follow our Twitter page</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class = "box" style="background-color: #fbfbfb; margin: 30px; box-shadow: 10px 10px 5px #417a82;">
+                            <p class="subHeadingText" style = "text-align: center; display: inline-block">Follow our Facebook page</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class = "box" style="background-color: #fbfbfb; margin: 30px; box-shadow: 10px 10px 5px #417a82;">
+                            <p class="subHeadingText" style = "text-align: center; display: inline-block">Check out our newsletter</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class = "box" style="background-color: #fbfbfb; margin: 30px; box-shadow: 10px 10px 5px #417a82;">
+                            <p class="subHeadingText" style = "text-align: center; display: inline-block">Find your local club</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class ="col-md-6">
-                <img class="boarder pic_right" src="../images/square_kid_coding.png" alt="Child programming">
-            </div>
-            <div class ="col-md-6">
-                <img class="boarder pic_right" src="../images/square_laptop.png" alt="Laptop with code">
-            </div>
+            <h2 class = "subHeadingText">What we do</h2>
 
-            <hr class="featurette-divider">
-
-            <!-- FOOTER -->
-            <footer>
-                <p class="pull-right bodyText"><a href="#">Back to top</a></p>
-                <p class="bodyText">© 2016 KidsCoding. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-            </footer>
+            <p class = "bodyText">Kids Coding run their ‘coding clubs’ at local schools. The schools
+                provide the resources which are key to the children's learning. To sign up your
+                school click here.
+            </p>
+            <p class = "bodyText">As Kids Coding rely on the generous donations from people like you.
+                Even a small contribution can help build a child’s future.
+            </p>
+            <p class = "bodyText">To follow us more visit our newsletter, facebook page or twitter page.
+            </p>
         </div>
     </div>
+
+    <div id = "footer"></div>
 
 </body>
 </html>

@@ -8,12 +8,6 @@ body {
     border: 1px solid #395653;
 }
 
-.navbox{
-    margin: 0;
-    background-color: #65bfcc;
-    height: 50px;
-}
-
 .bottomBox{
     margin: 0;
     background-color: #395653;
@@ -23,7 +17,6 @@ body {
 .box{
     margin-bottom: 20px;
     background-color: #fbfbfb;
-    opacity: 1;
     box-shadow: 0px 3px 5px 1px silver;
 }
 
