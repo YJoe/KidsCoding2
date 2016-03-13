@@ -1,5 +1,5 @@
 body {
-    background-color: #ffffff;
+    background-color: #fbfbfb;
     margin:0 auto;
 }
 
@@ -112,7 +112,8 @@ img.boarder {
 /* navbar */
 .navbar-default {
     background-color: #395653;
-    border-color: #000000;
+    border-width: 0;
+
 }
 /* title */
 .navbar-default .navbar-brand {
@@ -132,7 +133,7 @@ img.boarder {
     color: #65bfcc;
 }
 .navbar-default .navbar-nav > li > a:focus {
-    color: #f69e3f;
+    color: #65bfcc;
 }
 .navbar-default .navbar-nav > .active > a:hover{
     color: #65bfcc;
