@@ -46,7 +46,7 @@ img.boarder {
     margin-top: 0;
     font-family: "Roboto";
     text-align: justify;
-    font-size: 16px;
+    font-size: 18px;
     color: #395653;
     display: inline-block;
 }
@@ -63,7 +63,7 @@ img.boarder {
 .subHeadingText{
     margin: 30px;
     font-family: "Roboto-Bold";
-    font-size: 20px;
+    font-size: 30px;
     color: #65bfcc;
     display: inline-block;
 }
@@ -118,7 +118,9 @@ img.boarder {
 .navbar-default .navbar-brand {
     color: #ffffff;
 }
-.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:hover {
+    color: #65bfcc;
+}
 .navbar-default .navbar-brand:focus {
     color: #ffffff;
 }
@@ -126,15 +128,20 @@ img.boarder {
 .navbar-default .navbar-nav > li > a {
     color: #ffffff;
 }
-.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:hover{
+    color: #65bfcc;
+}
 .navbar-default .navbar-nav > li > a:focus {
     color: #f69e3f;
 }
+.navbar-default .navbar-nav > .active > a:hover{
+    color: #65bfcc;
+}
+
 .navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
     color: #ffffff;
-    background-color: #1f3f3a;
+    background-color: #65bfcc;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
