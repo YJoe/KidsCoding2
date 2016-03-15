@@ -51,6 +51,15 @@ img.boarder {
     display: inline-block;
 }
 
+.footerText{
+    margin-left: 30px;
+    margin-top: 0;
+    font-family: "Roboto";
+    font-size: 18px;
+    color: #fbfbfb;
+    display: inline-block;
+}
+
 .headingText{
     margin-left: 30px;
     margin-right: 30px;
