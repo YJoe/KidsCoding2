@@ -13,9 +13,6 @@ function initialize()
 
     var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
-
-    addMarker(51.450773, -0.956063, map, "Reading school", "7 Erleigh Rd", "RG1 5LW", "0118 901 5600", "Steve_kidscoding@hotmail.com");
-
     addMarker(51.446636, -0.948292, map, "St Josephs College", "Upper Redlands Rd", "RG1 5JT", "0118 966 1000", "Joe_kidscoding@hotmail.com");
 
     addMarker(51.448575, -0.963856, map, "The Abbey school", "17 Kendrick Rd", "RG1 5DZ", "0118 987 2256", "Amy_kidscoding@hotmail.com");
