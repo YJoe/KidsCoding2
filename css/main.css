@@ -68,10 +68,13 @@ img.boarder {
     display: inline-block;
 }
 /*Carousel*/
+.carousel-indicators{
+    top:-30px;
+}
 .carousel-indicators li {
     display: inline-block;
-    width: 48px;
-    height: 48px;
+    width: 10px;
+    height: 10px;
     margin: 10px;
     text-indent: 0;
     cursor: pointer;
@@ -81,8 +84,8 @@ img.boarder {
     box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
 }
 .carousel-indicators .active {
-    width: 48px;
-    height: 48px;
+    width: 12px;
+    height: 12px;
     margin: 10px;
     background-color: #ffff99;
 }
