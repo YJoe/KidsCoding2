@@ -21,71 +21,61 @@
         });
     </script>
 
-    <!-- Carrousell -->
-    <script src="../js/CarrouselImg.js"></script>
+    <!-- Carousel -->
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../css/main.css"></script>
-
 
 </head>
 
 
-<body id="Newsletter">
+<body id="Newsletter" background="../images/logo-big.png" style = "background-repeat: no-repeat;background-attachment: fixed; background-position: bottom right; ">
     <div id="navbar"></div>
 
     <!--IMAGE AND TEXT-->
     <div class="container marketing">
         <!-- START THE FEATURETTES -->
-        <div class = box>
-            <div class="row featurette">
+        <div class = box style = "margin: 0">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="10000">
+                <!-- Indicators -->
+                <ol class="carousel-indicators carousel-control" >
+                    <li data-target="#myCarousel" data-slide-to="0" title="New Location: 12/03/2014" class="active" ></li>
+                    <li data-target="#myCarousel" data-slide-to="1" title="Bake Sale Success: 21/07/2015"></li>
+                </ol>
 
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
 
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators carousel-control" >
-                        <li data-target="#myCarousel" data-slide-to="0" title="New Location: 12/03/2014" class="active" ></li>
-                        <li data-target="#myCarousel" data-slide-to="1" title="Bake Sale Success: 21/07/2015"></li>
-                    </ol>
+                    <div class="item active">
+                        <h2 class="featurette-heading subHeadingText">New Location</h2>
+                        <img class="img-responsive center-block" src="../images/Reading%20School.jpg"
+                             style="width: 70%; height: 70%;" title="Reading School, new location">
+                        <p class="bodyText">
+                            <i><b>
+                                This past week, due to all of your funding and interest in our courses
+                                (as well as our bake sale being a huge success!) we have managed to secure
+                                another location at Reading School to hold more of our weekly sessions,
+                                bringing us up to a total of six locations. This will allow us to take on
+                                more kids and get them creating their own apps in no time! Again we would like to
+                                thank all of our donors as well as all of the volunteers who have given their time
+                                to help us grow.
+                            </b></i> - James Coleby 12/03/2014
+                        </p>
+                    </div>
 
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <h2 class="featurette-heading subHeadingText">New Location</h2>
-                            <img class="img-responsive center-block" src="../images/Reading%20School.jpg"
-                                 style="width: 70%; height: 70%;" title="Reading School, new location">
-                            <p class="bodyText">
-                            <p class="bodyText">
-                                <i><b>
-                                    This past week, due to all of your funding and interest in our courses
-                                    (as well as our bake sale being a huge success!) we have managed to secure
-                                    another location at Reading School to hold more of our weekly sessions,
-                                    bringing us up to a total of six locations. This will allow us to take on
-                                    more kids and get them creating their own apps in no time! Again we would like to
-                                    thank all of our donors as well as all of the volunteers who have given their time
-                                    to help us grow.
-                                </b></i> - James Coleby 12/03/2014
-                            </p>
-                        </div>
-
-                        <div class="item">
-                            <h2 class="featurette-heading subHeadingText">Bake Sale Success</h2>
-                            <img class="img-responsive center-block" src="../images/cupcakes.jpg"
-                                 style="width: 70%; height: 70%; margin-bottom: 20px" title="Cupcakes">
-                            <p class="bodyText">
-                                <i><b>
-                                    Our annual bake sale has gone down a treat yet again,
-                                    with a turnout of more than 30 families from our sessions
-                                    ringing in a grand total of £821! This money will go towards
-                                    all of the resources necessary to keep our classes going.
-                                    Special thanks to our tp fundraiser Tyrone Jeromson who managed to raise £74.60!
-                                </b></i> - Emilly Parker 21/07/2015
-                            </p>
-                        </div>
-
-
+                    <div class="item">
+                        <h2 class="featurette-heading subHeadingText">Bake Sale Success</h2>
+                        <img class="img-responsive center-block" src="../images/cupcakes.jpg"
+                             style="width: 70%; height: 70%; margin-bottom: 20px" title="Cupcakes">
+                        <p class="bodyText">
+                            <i><b>
+                                Our annual bake sale has gone down a treat yet again,
+                                with a turnout of more than 30 families from our sessions
+                                ringing in a grand total of £821! This money will go towards
+                                all of the resources necessary to keep our classes going.
+                                Special thanks to our tp fundraiser Tyrone Jeromson who managed to raise £74.60!
+                            </b></i> - Emilly Parker 21/07/2015
+                        </p>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
