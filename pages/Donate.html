@@ -34,14 +34,38 @@
         });
     </script>
 
+    <script src="../js/validate.js"></script>
+
+
+    <link data-require="bootstrap-css@3.0.1" data-semver="3.0.1" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" />
+    <script src="http://code.angularjs.org/1.2.5/angular.js" data-semver="1.2.5" data-require="angular.js@1.2.5"></script>
+    <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script data-require="bootstrap@3.0.1" data-semver="3.0.1" src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+    <script src="../js/validate.js"></script>
+
+    <style>
+        /* Styles go here */
+        body {
+            padding: 10px;
+        }
+
+        .form-group .help-block {
+            display: none;
+        }
+
+        .form-group.has-error .help-block {
+            display: block;
+        }
+    </style>
+
 
 </head>
 
 
 <body id="Donate" background="../images/logo-big.png" style = "background-repeat: no-repeat;background-attachment: fixed; background-position: bottom right; ">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../js/jquery-2.2.2.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/form_validation.js"></script>
+    <script src="../js/validate.js"></script>
 
     <div id="navbar"></div>
 
@@ -63,120 +87,41 @@
 
             <!-- FORM -->
             <div class="col-md-6" style = "margin-top: 50px;">
-                <form id="productForm" method="post" class="form-horizontal">
-                    <div class="form-group">
-                        <label class="col-xs-3 control-label">Title</label>
-                        <div class="col-xs-6 selectContainer">
-                            <select class="form-control" name="title">
-                                <option>Title</option>
-                                <option>Mr</option>
-                                <option>Miss</option>
-                                <option>Mrs</option>
-                                <option>Ms</option>
-                            </select>
+                <div  ng-app="app" ng-controller="NewUserController">
+                    <h1>Add New User</h1>
+                    <form name="userForm" novalidate>
+                        <!--NAME-->
+                        <div class="form-group" show-errors='{showSuccess: true}'>
+                            <label class="control-label">Name</label>
+                            <input type="text" class="form-control" name="name" ng-model="user.name" required placeholder="Name" />
+                            <p class="help-block" ng-if="userForm.name.$error.required">Your name is required</p>
                         </div>
-                    </div>
+                        <!--EMAIL-->
+                        <div class="form-group" show-errors='{showSuccess: true}'>
+                            <label class="control-label">Email</label>
+                            <input type="email" class="form-control" name="email" ng-model="user.email" required placeholder="Email" />
+                            <p class="help-block" ng-if="userForm.email.$error.required">Your email is required</p>
+                            <p class="help-block" ng-if="userForm.email.$error.email">This is not a valid email address</p>
+                        </div>
+                        <!--EMAIL-->
+                        <div class="form-group" show-errors='{showSuccess: true}'>
+                            <label class="control-label">Donation amount</label>
+                            <input type="email" class="form-control" name="email" ng-model="user.email" required placeholder="Email" />
+                            <p class="help-block" ng-if="userForm.email.$error.required">Your email is required</p>
+                            <p class="help-block" ng-if="userForm.email.$error.email">This is not a valid email address</p>
+                        </div>
 
-                    <div class="form-group">
-                        <label class="col-xs-3 control-label">Name</label>
-                        <div class="col-xs-6">
-                            <input type="text" class="form-control" name="name" />
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-xs-3 control-label">Donation Message</label>
-                        <div class="col-xs-6">
-                            <textarea name="message" class="form-control" rows="3"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-xs-3 control-label">Donation Amount</label>
-                        <div class="col-xs-6 inputGroupContainer">
-                            <div class="input-group">
-                                <input type="text" class="form-control" name="amount" />
-                                <span class="input-group-addon">£</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div id="content">
-                            <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-                                <li class="active"><a href="#cred" data-toggle="tab">Credit/Debit</a></li>
-                                <li><a href="#pay" data-toggle="tab">PayPal</a></li>
-                            </ul>
-                            <br/>
-                            <!--CARD LAYOUT-->
-                            <div id="my-tab-content" class="tab-content">
-                                <div class="tab-pane active" id="cred">
-                                    <!--CARD HOLDER NAME-->
-                                    <div class="form-group">
-                                        <label class="col-xs-3 control-label">Card holder name</label>
-                                        <div class="col-xs-6">
-                                            <input type="text" class="form-control" name="name" />
-                                        </div>
-                                    </div>
-                                    <!--CARD NUMBER-->
-                                    <div class="form-group">
-                                        <label class="col-xs-3 control-label">Card number</label>
-                                        <div class="col-xs-6">
-                                            <input type="text" class="form-control" name="name" />
-                                        </div>
-                                    </div>
-                                    <!--EXPIRATION DATE-->
-                                    <div class="form-group">
-                                        <label class="col-xs-3 control-label">Expiration date</label>
-                                        <div class="col-xs-6">
-                                            <input type="text" class="form-control" name="name" />
-                                        </div>
-                                    </div>
-                                    <!--CVC NUMBER-->
-                                    <div class="form-group">
-                                        <label class="col-xs-3 control-label">CVC number</label>
-                                        <div class="col-xs-6">
-                                            <input type="text" class="form-control" name="name" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--PAY PAL LAYOUT-->
-                                <div class="tab-pane" id="pay">
-                                    <!--PAYPAL ACCOUNT-->
-                                    <div class="form-group">
-                                        <label class="col-xs-3 control-label">Account name</label>
-                                        <div class="col-xs-6">
-                                            <input type="text" class="form-control" name="name" />
-                                        </div>
-                                    </div>
-                                    <!--PAYPAL PASSWORD-->
-                                    <div class="form-group">
-                                        <label class="col-xs-3 control-label">Password</label>
-                                        <div class="col-xs-6">
-                                            <input type="password" class="form-control" name="name" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-xs-5 col-xs-offset-3">
-                            <button type="submit" class="btn btn-default">Donate</button>
-                            <input type="checkbox" name="name" />I am over 18</input>
-                        </div>
-                    </div>
-                </form>
+                        <button class="btn btn-primary" ng-click="save()">Add User</button>
+                        <button class="btn btn-link" ng-click="reset()">Reset</button>
+                    </form>
+                </div>
             </div>
-
             <p class="bodyText">
                 Contact Email: <a href="mailto:KC.enquiries@homail.com">KC.enquiries@homail.com</a>
             </p>
             <p class="bodyText">
                 Phone: <a href="tel:+44118 872 2345">0118 872 2345</a><br />
             </p>
-            </div>
         </div>
     </div>
 
