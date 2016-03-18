@@ -78,7 +78,7 @@ img.boarder {
 }
 /*Carousel*/
 .carousel-indicators{
-    top: 0;
+    height: 20px;
 }
 .carousel-indicators li {
     display: inline-block;
@@ -97,14 +97,6 @@ img.boarder {
     height: 22px;
     margin: 10px;
     background-color: #65bfcc;
-}
-
-.carousel-inner {
-    margin-bottom:0;
-}
-
-.carousel-caption {
-    bottom: -7%;
 }
 
 .carousel-control.left, .carousel-control.right {
