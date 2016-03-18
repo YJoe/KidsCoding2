@@ -87,8 +87,7 @@
 
             <!-- FORM -->
             <div class="col-md-6" style = "margin-top: 50px;">
-                <div  ng-app="app" ng-controller="NewUserController">
-                    <h1>Add New User</h1>
+                <div ng-app="app" ng-controller="NewUserController">
                     <form name="userForm" novalidate>
                         <!--NAME-->
                         <div class="form-group" show-errors='{showSuccess: true}'>
@@ -96,6 +95,7 @@
                             <input type="text" class="form-control" name="name" ng-model="user.name" required placeholder="Name" />
                             <p class="help-block" ng-if="userForm.name.$error.required">Your name is required</p>
                         </div>
+
                         <!--EMAIL-->
                         <div class="form-group" show-errors='{showSuccess: true}'>
                             <label class="control-label">Email</label>
@@ -103,14 +103,82 @@
                             <p class="help-block" ng-if="userForm.email.$error.required">Your email is required</p>
                             <p class="help-block" ng-if="userForm.email.$error.email">This is not a valid email address</p>
                         </div>
-                        <!--EMAIL-->
+
+                        <!--DONATION-->
                         <div class="form-group" show-errors='{showSuccess: true}'>
                             <label class="control-label">Donation amount</label>
-                            <input type="email" class="form-control" name="email" ng-model="user.email" required placeholder="Email" />
-                            <p class="help-block" ng-if="userForm.email.$error.required">Your email is required</p>
-                            <p class="help-block" ng-if="userForm.email.$error.email">This is not a valid email address</p>
+                            <input type="number" class="form-control" name="donation" ng-model="user.donation" required placeholder="Donation"
+                                   min="5"/>
+                            <p class="help-block" ng-if="userForm.donation.$error.required">A donation amount is required</p>
+                            <p class="help-block" ng-if="userForm.donation.$error.min">A minimum donation of £5 is required</p>
+                            <p class="help-block" ng-if="userForm.donation.$error.number">This is not a number</p>
                         </div>
 
+                        <!--DONATION MESSAGE-->
+                        <div class="form-group" show-errors='{showSuccess: true}'>
+                            <label class="control-label">Donation message</label>
+                            <input type="text" class="form-control" name="message" ng-model="user.message" required placeholder="Message"/>
+                        </div>
+
+                        <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                            <li class="active"><a href="#cred" data-toggle="tab">Credit/Debit</a></li>
+                            <li><a href="#pay" data-toggle="tab">PayPal</a></li>
+                        </ul>
+                        <div id="my-tab-content" class="tab-content">
+
+                            <!--CARD LAYOUT-->
+                            <div class="tab-pane active" id="cred">
+                                <!--NAME-->
+                                <div class="form-group" show-errors='{showSuccess: true}'>
+                                    <label class="control-label">Name</label>
+                                    <input type="text" class="form-control" name="name" ng-model="user.name" required placeholder="Name" />
+                                    <p class="help-block" ng-if="userForm.name.$error.required">Your name is required</p>
+                                </div>
+
+                                <!--CARD NUMBER-->
+                                <div class="form-group" show-errors='{showSuccess: true}'>
+                                    <label class="control-label">Card number</label>
+                                    <input type="number" class="form-control" name="cardNumber" ng-model="user.cardnumber" required placeholder="Card number"
+                                           ng-minlength="16" ng-maxlength="16"/>
+                                    <p class="help-block" ng-if="userForm.cardNumber.$error.required">A card number is required</p>
+                                    <p class="help-block" ng-if="userForm.cardNumber.$error.minlength">This is not a valid card number</p>
+                                    <p class="help-block" ng-if="userForm.cardNumber.$error.maxlength">This is not a valid card number</p>
+                                    <p class="help-block" ng-if="userForm.cardNumber.$error.number">This is not a number</p>
+                                </div>
+
+                                <!--EXPIRATION DATE-->
+
+
+                                <!--CVC NUMBER-->
+                                <div class="form-group" show-errors='{showSuccess: true}'>
+                                    <label class="control-label">Card number</label>
+                                    <input type="number" class="form-control" name="cardNumber" ng-model="user.cardnumber" required placeholder="Card number"
+                                           ng-minlength="3" ng-maxlength="3"/>
+                                    <p class="help-block" ng-if="userForm.cardNumber.$error.required">A card number is required</p>
+                                    <p class="help-block" ng-if="userForm.cardNumber.$error.minlength">This is not a valid card number</p>
+                                    <p class="help-block" ng-if="userForm.cardNumber.$error.maxlength">This is not a valid card number</p>
+                                    <p class="help-block" ng-if="userForm.cardNumber.$error.number">This is not a number</p>
+                                </div>
+                            </div>
+
+                            <!--PAY PAL LAYOUT-->
+                            <div class="tab-pane" id="pay">
+                                <!--PAYPAL ACCOUNT-->
+                                <div class="form-group" show-errors='{showSuccess: true}'>
+                                    <label class="control-label">PayPal account email</label>
+                                    <input type="email" class="form-control" name="payEmail" ng-model="user.payEmail" required placeholder="Email" />
+                                    <p class="help-block" ng-if="userForm.payEmail.$error.required">A PayPal account email is required</p>
+                                    <p class="help-block" ng-if="userForm.payEmail.$error.email">This is not a valid email address</p>
+                                </div>
+
+                                <!--PAYPAL PASSWORD-->
+                                <div class="form-group" show-errors='{showSuccess: true}'>
+                                    <label class="control-label">PayPal account email</label>
+                                    <input type="password" class="form-control" name="payPassword" ng-model="user.payPassword" required placeholder="Email" />
+                                    <p class="help-block" ng-if="userForm.payPassword.$error.required">Your PayPal password is required</p>
+                                </div>
+                            </div>
+                        </div>
                         <button class="btn btn-primary" ng-click="save()">Add User</button>
                         <button class="btn btn-link" ng-click="reset()">Reset</button>
                     </form>

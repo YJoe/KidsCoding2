@@ -86,7 +86,7 @@ module.controller('NewUserController', function($scope) {
 
     $scope.reset = function() {
         $scope.$broadcast('show-errors-reset');
-        $scope.user = { name: '', email: '' };
+        $scope.user = { name: '', email: '', donation: '', message: ''};
     }
 });
 
