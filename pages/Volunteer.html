@@ -208,6 +208,24 @@
                                     <input type="text" class="form-control" name="postCode" ng-model="user.addressLine1" required placeholder="Post code" />
                                     <p class="help-block" ng-if="userForm.postCode.$error.required">Your post code is required</p>
                                 </div>
+
+                                <!--UPLOADS-->
+                                <div style="margin: 20px">
+                                    <div class = "row">
+                                        <div class="fileUpload btn btn-primary" style="width: 200px">
+                                            <span style="text-align: center">Upload DBS(CRB)</span>
+                                            <input id="uploadCRBButton" type="file" class="upload"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="fileUpload btn btn-primary" style="width: 200px">
+                                            <span style="text-align: center">Upload CV</span>
+                                            <input id="uploadCVButton" type="file" class="upload" />
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <button class="btn btn-primary" style="margin-bottom: 20px" ng-click="save()">Volunteer</button>
                                 <button class="btn btn-primary" style="margin-bottom: 20px" ng-click="reset()">Clear form</button>
                             </form>
