@@ -20,6 +20,23 @@
             $("#footer").load("footer.html");
         });
     </script>
+
+    <link data-require="bootstrap-css@3.0.1" data-semver="3.0.1" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" />
+    <script src="http://code.angularjs.org/1.2.5/angular.js" data-semver="1.2.5" data-require="angular.js@1.2.5"></script>
+    <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script data-require="bootstrap@3.0.1" data-semver="3.0.1" src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+    <script src="../js/validate.js"></script>
+
+    <style>
+        .form-group .help-block {
+            display: none;
+        }
+
+        .form-group.has-error .help-block {
+            display: block;
+        }
+    </style>
+    <script src="../js/UploadButtons.js"></script>
 </head>
 
 
@@ -91,6 +108,112 @@
                     Fill in the form below with your personal details, upload a CV detailing any programming
                     experience or past experience dealing with children. Upload a valid DBS check and Kids Coding will get in touch.
                 </p>
+
+                <div class = "row">
+                    <div class = "col-md-5">
+
+                    </div>
+                    <div class = "col-md-1">
+
+                    </div>
+                    <div class = "col-md-5">
+                        <div ng-app="app" ng-controller="NewUserController">
+                            <form name="userForm" novalidate>
+                                <!--NAME-->
+                                <div class="form-group" show-errors='{showSuccess: true}'>
+                                    <label class="control-label">Name</label>
+                                    <input type="text" class="form-control" name="name" ng-model="user.name" required placeholder="Name" />
+                                    <p class="help-block" ng-if="userForm.name.$error.required">Your name is required</p>
+                                </div>
+
+                                <!--AGE-->
+                                <div class="form-group" show-errors='{showSuccess: true}'>
+                                    <label class="control-label">Donation amount</label>
+                                    <input type="number" class="form-control" name="age" ng-model="user.age" required placeholder="Age"
+                                           min="18"/>
+                                    <p class="help-block" ng-if="userForm.age.$error.required">You must specify your age</p>
+                                    <p class="help-block" ng-if="userForm.age.$error.min">You must be 16 or over to volunteer</p>
+                                    <p class="help-block" ng-if="userForm.age.$error.number">This is not a number</p>
+                                </div>
+
+                                <!--OCCUPATION-->
+                                <div class="form-group" show-errors='{showSuccess: true}'>
+                                    <label class="control-label">Current occupation</label>
+                                    <input type="text" class="form-control" name="occupation" ng-model="user.occupation" required placeholder="Occupation" />
+                                    <p class="help-block" ng-if="userForm.occupation.$error.required">Your occupation is required (i.e Unemployed, Student, Programmer)</p>
+                                </div>
+
+                                <!--DONATION MESSAGE-->
+                                <div class="form-group" show-errors='{showSuccess: true}'>
+                                    <label class="control-label">Donation message</label>
+                                    <input type="text" class="form-control" name="message" ng-model="user.message" required placeholder="Message"/>
+                                </div>
+
+                                <!--PHONE-->
+                                <div class="form-group" show-errors='{showSuccess: true}'>
+                                    <label class="control-label">Phone number</label>
+                                    <input type="number" class="form-control" name="phone" ng-model="user.phone" required placeholder="phone"
+                                           ng-minlength="11" ng-maxlength="11"/>
+                                    <p class="help-block" ng-if="userForm.phone.$error.required">A phone number is required</p>
+                                    <p class="help-block" ng-if="userForm.phone.$error.minlength">This is not a valid phone number</p>
+                                    <p class="help-block" ng-if="userForm.phone.$error.maxlength">This is not a valid phone number</p>
+                                    <p class="help-block" ng-if="userForm.phone.$error.number">This is not a number</p>
+                                </div>
+
+                                <!--EMAIL-->
+                                <div class="form-group" show-errors='{showSuccess: true}'>
+                                    <label class="control-label">Email</label>
+                                    <input type="email" class="form-control" name="email" ng-model="user.email" required placeholder="Email" />
+                                    <p class="help-block" ng-if="userForm.email.$error.required">Your email is required</p>
+                                    <p class="help-block" ng-if="userForm.email.$error.email">This is not a valid email address</p>
+                                </div>
+
+                                <!--ADDRESS-->
+                                <!--ADDRESS LINE-->
+                                <div class="form-group" show-errors='{showSuccess: true}'>
+                                    <label class="control-label">Address line 1</label>
+                                    <input type="text" class="form-control" name="addressLine1" ng-model="user.addressLine1" required placeholder="Address line 1" />
+                                    <p class="help-block" ng-if="userForm.addressLine1.$error.required">Your address is required</p>
+                                </div>
+
+                                <!--ADDRESS LINE-->
+                                <div class="form-group" show-errors='{showSuccess: true}'>
+                                    <label class="control-label">Address line 2</label>
+                                    <input type="text" class="form-control" name="addressLine2" ng-model="user.addressLine2" required placeholder="Address line 2" />
+                                </div>
+
+                                <!--ADDRESS LINE-->
+                                <div class="form-group" show-errors='{showSuccess: true}'>
+                                    <label class="control-label">Address line 3</label>
+                                    <input type="text" class="form-control" name="addressLine3" ng-model="user.addressLine3" required placeholder="Address line 3" />
+                                </div>
+
+                                <!--TOWN/CITY-->
+                                <div class="form-group" show-errors='{showSuccess: true}'>
+                                    <label class="control-label">Town/City</label>
+                                    <input type="text" class="form-control" name="townCity" ng-model="user.townCity" required placeholder="Town/City" />
+                                    <p class="help-block" ng-if="userForm.townCity.$error.required">Your town/city name is required</p>
+                                </div>
+
+                                <!--COUNTY-->
+                                <div class="form-group" show-errors='{showSuccess: true}'>
+                                    <label class="control-label">County</label>
+                                    <input type="text" class="form-control" name="county" ng-model="user.county" required placeholder="County" />
+                                    <p class="help-block" ng-if="userForm.county.$error.required">Your county is required</p>
+                                </div>
+
+                                <!--POST CODE-->
+                                <div class="form-group" show-errors='{showSuccess: true}'>
+                                    <label class="control-label">Post code</label>
+                                    <input type="text" class="form-control" name="postCode" ng-model="user.addressLine1" required placeholder="Post code" />
+                                    <p class="help-block" ng-if="userForm.postCode.$error.required">Your post code is required</p>
+                                </div>
+                                <button class="btn btn-primary" style="margin-bottom: 20px" ng-click="save()">Volunteer</button>
+                                <button class="btn btn-primary" style="margin-bottom: 20px" ng-click="reset()">Clear form</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
