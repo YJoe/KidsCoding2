@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Volunteer</title>
+    <title>KidsCoding</title>
 
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -22,13 +22,11 @@
     </script>
 
     <link data-require="bootstrap-css@3.0.1" data-semver="3.0.1" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" />
-    <!-- Previous line modifies main css (errors in navbar) -->
-
-
     <script src="http://code.angularjs.org/1.2.5/angular.js" data-semver="1.2.5" data-require="angular.js@1.2.5"></script>
     <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script data-require="bootstrap@3.0.1" data-semver="3.0.1" src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
     <script src="../js/validate.js"></script>
+    <script src="../js/discussion.js"></script>
 
     <style>
         .form-group .help-block {
@@ -100,7 +98,6 @@
                     </div>
                 </div>
 
-
                 <p class="bodyText">
                     To be a volunteer you need programming experience in any language and an enthusiasm to
                     teach young minds. You would also need to be able to dedicate regular amounts of time to
@@ -113,12 +110,14 @@
                 </p>
 
                 <div class = "row">
+                    <div class = "col-md-1"></div>
+
                     <div class = "col-md-5">
-
+                        <input type="text" id = "messageInput" class="form-control" name="messageInput" required placeholder="Send a message">
+                        <button class="btn btn-primary" onclick="addNewThread()">Start new thread</button>
+                        <div id="discussionThread"></div>
                     </div>
-                    <div class = "col-md-1">
 
-                    </div>
                     <div class = "col-md-5">
                         <div ng-app="app" ng-controller="NewUserController">
                             <form name="userForm" novalidate>

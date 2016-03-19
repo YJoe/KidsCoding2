@@ -4,7 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Navbar</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
 
+    <script>
+    $(document).ready(function() {
+        $("#extraLarge").click(function() {
+            $(".bodyText").css("font-size", 40);
+        });
+
+        $("#large").click(function() {
+            $(".bodyText").css("font-size", 20);
+        });
+
+        $("#normal").click(function() {
+            $(".bodyText").css("font-size", 18);
+        })
+    });
+    </script>
 </head>
 <body id="nav">
 
@@ -65,6 +81,10 @@
             </div>
         </div>
     </nav>
+
+    <button id = "normal">Normal</button>
+    <button id = "large">Large</button>
+    <button id = "extraLarge">Extra Larges</button>
 
 </body>
 </html>
