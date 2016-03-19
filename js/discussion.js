@@ -9,19 +9,19 @@ function addNewThread() {
         "</div>" +
         "<div id = 'thread" + threads + "'>"+
         "</div>" +
-        "<button class='btn btn-primary' onclick='messageInThread(" +
-        threads +
-        ")'>Reply</button>"
+        "<input type='text' id = 'subMessageInput" + threads + "' class='form-control' name='messageInput' required placeholder='Send a message'>" +
+        "<button class='btn btn-primary' onclick='messageInThread(" + threads + ")'>Reply</button>"
     ));
     threads += 1;
 }
 
 function messageInThread(threadID){
-    $('#' + 'thread' + threadID).append(
+    var threadDiv = '#' + 'thread' + threadID;
+    var threadIn = '#' + 'subMessageInput' + threadID;
+
+    $(threadDiv).append(
         "<div class = 'subMessageBox'>" +
-        "" +
-        "This is a reply test" +
-        "" +
+        $(threadIn).val()+
         "</div>"
     )
 }
