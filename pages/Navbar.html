@@ -13,7 +13,7 @@
         });
 
         $("#large").click(function() {
-            $(".bodyText").css("font-size", 20);
+            $(".bodyText").css("font-size", 30);
         });
 
         $("#normal").click(function() {
@@ -25,7 +25,15 @@
 <body id="nav">
 
     <!--NAVIGATION BAR-->
-    <div style="background-color: #65bfcc; height: 25px"></div>
+    <div style="background-color: #65bfcc; height: 35px">
+        <div class = "container marketing">
+            <div class = "pull-right">
+                <button class ="btn btn-primary" id = "normal">Normal</button>
+                <button class ="btn btn-primary" id = "large">Large</button>
+                <button class ="btn btn-primary" id = "extraLarge">Extra Large</button>
+            </div>
+        </div>
+    </div>
     <nav class="navbar navbar-default" style = "margin-bottom: 0">
         <div class="container marketing" >
             <div class="navbar-header">
@@ -81,10 +89,6 @@
             </div>
         </div>
     </nav>
-
-    <button id = "normal">Normal</button>
-    <button id = "large">Large</button>
-    <button id = "extraLarge">Extra Larges</button>
 
 </body>
 </html>
