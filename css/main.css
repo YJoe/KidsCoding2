@@ -58,6 +58,33 @@ img.boarder {
     src: url("../fonts/Roboto-Regular.ttf") format("truetype");
 }
 
+
+.messageBox{
+    background-color: #65bfcc;
+    width: 90%;
+    padding-left: 3px;
+    padding-top: 32px;
+    padding-right: 5px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.subMessageBox{
+    background-color: #fbfbfb;
+    width: 90%;
+    padding-left: 3px;
+    padding-top: 10px;
+    padding-right: 5px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.messageText{
+    font-family: "Roboto";
+    margin: 20px;
+    color: #ffffff;
+}
+
 .bodyText{
     margin: 30px;
     margin-top: 0;
