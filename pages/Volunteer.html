@@ -25,6 +25,10 @@
         });
     </script>
 
+    <script>
+
+    </script>
+
     <link data-require="bootstrap-css@3.0.1" data-semver="3.0.1" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" />
     <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script data-require="bootstrap@3.0.1" data-semver="3.0.1" src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
@@ -119,10 +123,10 @@
                     <div class = "col-md-5">
                         <div class = box style = "background-color: #65bfcc">
                             <div class = subHeadingText style = "color: #fbfbfb">Join the discussion</div>
-                            <div class = input-group>
+                            <div class = input-group id="form">
                                 <input type="text" id = "messageInput" class="form-control" style='margin: 20px; margin-top: 0;' placeholder="Write a message...">
                                 <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button" style='margin: 20px; margin-top: 0;' onclick="addNewThread()">Start a thread</button>
+                                    <button class="btn btn-default" type="button" style='margin: 20px; margin-top: 0;' onclick="addNewThread(validateForm('form'));">Start a thread</button>
                                 </span>
                             </div>
                         </div>
