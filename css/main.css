@@ -96,6 +96,15 @@ img.boarder {
     display: inline-block;
 }
 
+.logoFooterText{
+    margin-left: 30px;
+    font-family: "Roboto";
+    font-size: 18px;
+    color: #fbfbfb;
+    display: inline-block;
+    margin-top: 2%;
+}
+
 .subHeadingText{
     margin: 30px;
     font-family: "Roboto-Bold";
@@ -256,6 +265,8 @@ img.boarder {
         color: #ffffff;
     }
 }
+
+/*footer*/
 
 .footer-left {
     float: left;
