@@ -61,9 +61,9 @@ img.boarder {
 
 .messageBox{
     background-color: #65bfcc;
-    width: 90%;
+    width: 100%;
     padding-left: 3px;
-    padding-top: 32px;
+    padding-top: 20px;
     padding-right: 5px;
     margin-top: 20px;
     border-radius: 5px;
@@ -72,10 +72,12 @@ img.boarder {
 .subMessageBox{
     background-color: #fbfbfb;
     width: 90%;
-    padding-left: 3px;
-    padding-top: 10px;
-    padding-right: 5px;
-    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: right;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
     border-radius: 5px;
 }
 
