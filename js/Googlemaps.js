@@ -7,21 +7,21 @@ function initialize()
 {
     var mapProp = {
         center: myCenter,
-        zoom:12,
+        zoom: 12,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
     var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
-    addMarker(51.446636, -0.948292, map, "St Josephs College", "Upper Redlands Rd", "RG1 5JT", "0118 966 1000", "Joe_kidscoding@hotmail.com");
+    addMarker(51.446636, -0.948292, map, "St Josephs College", "Upper Redlands Rd", "RG1 5JT", "0118 966 1000", "Joe_ks@hotmail.com");
 
-    addMarker(51.448575, -0.963856, map, "The Abbey school", "17 Kendrick Rd", "RG1 5DZ", "0118 987 2256", "Amy_kidscoding@hotmail.com");
+    addMarker(51.448575, -0.963856, map, "The Abbey school", "17 Kendrick Rd", "RG1 5DZ", "0118 987 2256", "Amy_ks@hotmail.com");
 
-    addMarker(51.471171, -0.964309, map, "Queen Anne’s School", "6 Henley Rd", "RG4 6DX", "0118 918 7300", "John_kidscoding@hotmail.com");
+    addMarker(51.471171, -0.964309, map, "Queen Anne’s School", "6 Henley Rd", "RG4 6DX", "0118 918 7300", "John_ks@hotmail.com");
 
-    addMarker(51.457729, -1.057611, map, "Little Heath School", "Little Heath Rd", "RG31 5TY", "0118 942 7337", "Lorraine_kidscoding@hotmail.com");
+    addMarker(51.457729, -1.057611, map, "Little Heath School", "Little Heath Rd", "RG31 5TY", "0118 942 7337", "Lorraine_ks@hotmail.com");
 
-    addMarker(51.441749, -0.947975, map, "University of Reading School of Systems Engineering", "The Queen's Dr", "RG6 6AY", "0118 378 7565", "Billy_kidscoding@hotmail.com");
+    addMarker(51.441749, -0.947975, map, "University of Reading School of Systems Engineering", "The Queen's Dr", "RG6 6AY", "0118 378 7565", "Billy_ks@hotmail.com");
 
     var icon = {
         url: '../images/location_icon.png',
@@ -35,7 +35,7 @@ function initialize()
     });
     markerSchool.setMap(map);
 
-    addInfoWindow(map, markerSchool, "Head Offices", "Dukesbridge House, 23 Duke Street", "RG1 4SA", "0118 901 5678", "Emily_kidscoding@hotmail.com")
+    addInfoWindow(map, markerSchool, "Head Offices", "Dukesbridge House, 23 Duke Street", "RG1 4SA", "0118 901 5678", "Emily_ks@hotmail.com")
 
 }
 
