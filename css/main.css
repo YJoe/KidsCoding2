@@ -81,12 +81,6 @@ img.boarder {
     border-radius: 5px;
 }
 
-.messageText{
-    font-family: "Roboto";
-    margin: 20px;
-    color: #ffffff;
-}
-
 .bodyText{
     margin: 30px;
     margin-top: 0;
@@ -103,15 +97,6 @@ img.boarder {
     font-family: "Roboto";
     font-size: 18px;
     color: #fbfbfb;
-    display: inline-block;
-}
-
-.headingText{
-    margin-left: 30px;
-    margin-right: 30px;
-    font-family: "Roboto-Bold";
-    font-size: 40px;
-    color:  #395653;
     display: inline-block;
 }
 
