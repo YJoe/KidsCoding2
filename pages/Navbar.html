@@ -9,18 +9,21 @@
     <script>
     $(document).ready(function() {
         $("#extraLarge").click(function() {
+            $(".menuText").css("font-size", 40);
             $(".bodyText").css("font-size", 40);
             $(".footerText").css("font-size", 40);
             $(".subHeadingText").css("font-size", 60);
         });
 
         $("#large").click(function() {
+            $(".menuText").css("font-size", 30);
             $(".bodyText").css("font-size", 30);
             $(".footerText").css("font-size", 30);
             $(".subHeadingText").css("font-size", 50);
         });
 
         $("#normal").click(function() {
+            $(".menuText").css("font-size", 18);
             $(".bodyText").css("font-size", 18);
             $(".footerText").css("font-size", 18);
             $(".subHeadingText").css("font-size", 30);
@@ -58,12 +61,7 @@
                     <li class="menuText"><a href="Contact.html" data-toggle="tab" >Contact</a></li>
                 </ul>
             </div>
-            <!-- SEARCH BAR
-            <form class="navbar-form navbar-right" role="search" method="get" action="http://www.google.com/search">
-                <input type="text" name="q" class="form-control menuText" value="" placeholder="Search">
-                <button type="submit" class="btn btn-default menuText">Submit</button>
-            </form>
--->
+            <!-- SEARCH BAR -->
 
             <form class="navbar-form navbar-right" role="search" action="http://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
                 <input type="hidden" name="si" value="12388689">

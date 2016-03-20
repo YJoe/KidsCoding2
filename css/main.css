@@ -20,12 +20,6 @@ body {
     box-shadow: 0px 3px 5px 1px silver;
 }
 
-.menuText{
-    font-family: "Arial";
-    font-size: 18px;
-    color: #000000;
-}
-
 img.boarder {
     border-style: solid;
     border-width: 1px;
@@ -81,6 +75,8 @@ img.boarder {
     border-radius: 5px;
 }
 
+
+/* TEXT */
 .bodyText{
     margin: 30px;
     margin-top: 0;
@@ -107,6 +103,13 @@ img.boarder {
     color: #65bfcc;
     display: inline-block;
 }
+
+.menuText{
+    font-family: "Arial";
+    font-size: 18px;
+    color: #000000;
+}
+
 /*Carousel*/
 .carousel-indicators{
     height: 20px;
@@ -138,7 +141,7 @@ img.boarder {
     top: 0;
     left: 0;
     min-width: 10%;
-    height: 350px;
+    height: 410px;
 }
 
 /* Images Home page */
