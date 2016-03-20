@@ -35,7 +35,7 @@ function initialize()
     });
     markerSchool.setMap(map);
 
-    addInfoWindow(map, markerSchool, "Head Offices", "Dukesbridge House, 23 Duke Street", "RG1 4SA", "0118 901 5678", "Emilly_kidscoding@hotmail.com")
+    addInfoWindow(map, markerSchool, "Head Offices", "Dukesbridge House, 23 Duke Street", "RG1 4SA", "0118 901 5678", "Emily_kidscoding@hotmail.com")
 
 }
 
