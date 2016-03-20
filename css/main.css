@@ -120,6 +120,11 @@ img.boarder {
 }
 
 /*Carousel*/
+.carousel-control{
+    opacity:.9
+}
+
+
 .carousel-indicators{
     height: 20px;
 }
