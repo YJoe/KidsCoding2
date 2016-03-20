@@ -11,6 +11,9 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
 
+    <!-- Angular JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+
     <!-- NAVBAR-->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="../js/Navbar.js"></script>
@@ -149,12 +152,6 @@
                                     <label class="control-label">Current occupation</label>
                                     <input type="text" class="form-control" name="occupation" ng-model="user.occupation" required placeholder="Occupation" />
                                     <p class="help-block" ng-if="userForm.occupation.$error.required">Your occupation is required (i.e Unemployed, Student, Programmer)</p>
-                                </div>
-
-                                <!--DONATION MESSAGE-->
-                                <div class="form-group" show-errors='{showSuccess: true}'>
-                                    <label class="control-label">Donation message</label>
-                                    <input type="text" class="form-control" name="message" ng-model="user.message" required placeholder="Message"/>
                                 </div>
 
                                 <!--PHONE-->
