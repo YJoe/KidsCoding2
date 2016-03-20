@@ -17,6 +17,7 @@ function addNewThread() {
             "</span>" +
         "</div>"
     ));
+
     threads += 1;
 }
 
