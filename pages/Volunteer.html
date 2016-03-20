@@ -23,6 +23,13 @@
         $(function(){
             $("#footer").load("footer.html");
         });
+
+        function displayInput(divID, fileName){
+            fileName = fileName.replace(/.*[\/\\]/, '');
+            $('#' + divID).append(
+                fileName
+            );
+        }
     </script>
 
     <script>
@@ -145,9 +152,9 @@
 
                                 <!--AGE-->
                                 <div class="form-group" show-errors='{showSuccess: true}'>
-                                    <label class="control-label">Donation amount</label>
+                                    <label class="control-label">Age</label>
                                     <input type="number" class="form-control" name="age" ng-model="user.age" required placeholder="Age"
-                                           min="18"/>
+                                           min="16"/>
                                     <p class="help-block" ng-if="userForm.age.$error.required">You must specify your age</p>
                                     <p class="help-block" ng-if="userForm.age.$error.min">You must be 16 or over to volunteer</p>
                                     <p class="help-block" ng-if="userForm.age.$error.number">This is not a number</p>
@@ -225,15 +232,17 @@
                                     <div class = "row">
                                         <div class="fileUpload btn btn-primary" style="width: 200px">
                                             <span style="text-align: center">Upload DBS(CRB)</span>
-                                            <input id="uploadCRBButton" type="file" class="upload"/>
+                                            <input id="uploadCRBButton" type="file" class="upload" onchange="displayInput('textCRB', this.value)"/>
                                         </div>
+                                        <div id = 'textCRB' class = bodyText></div>
                                     </div>
 
                                     <div class="row">
                                         <div class="fileUpload btn btn-primary" style="width: 200px">
                                             <span style="text-align: center">Upload CV</span>
-                                            <input id="uploadCVButton" type="file" class="upload" />
+                                            <input id="uploadCVButton" type="file" class="upload" onchange="displayInput('textCV', this.value)"/>
                                         </div>
+                                        <div id = 'textCV' class = bodyText></div>
                                     </div>
                                 </div>
 
