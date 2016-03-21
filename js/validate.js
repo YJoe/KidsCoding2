@@ -75,18 +75,35 @@ module.provider('showErrorsConfig', function () {
 });
 
 module.controller('NewUserController', function($scope) {
-    $scope.save = function() {
-        $scope.$broadcast('show-errors-check-validity');
+    $scope.cardName = "";
+    $scope.cardNumber = "";
+    $scope.cvc = "";
 
-        if ($scope.userForm.$valid) {
+    $scope.payEmail = "";
+    $scope.payPassword = "";
+
+    $scope.cond = (($scope.cardName != "" && $scope.cardNumber != "" && $scope.cvc != "") || ($scope.payEmail != "" && $scope.payPassword != ""));
+
+    $scope.user= {};
+
+    $scope.save = function() {
+        //$scope.$broadcast('show-errors-check-validity');
+        console.log("clicked");
+        console.log($scope.userForm.cardName.$valid);
+        console.log($scope.userForm.cardNumber.$valid);
+        console.log($scope.userForm.cvc.$valid);
+        console.log($scope.userForm.payEmail.$valid);
+        console.log($scope.userForm.payPassword.$valid);
+
+        if (($scope.userForm.cardName.$valid && $scope.userForm.cardNumber.$valid && $scope.userForm.cvc.$valid)
+            || ($scope.userForm.payEmail.$valid && $scope.userForm.payPassword.$valid)) {
             alert('User saved');
             $scope.reset();
         }
     };
 
     $scope.reset = function() {
-        $scope.$broadcast('show-errors-reset');
-        $scope.user = { name: '', email: '', donation: '', message: ''};
+        $scope.userForm = { name: '', email: '', donation: '', message: ''};
     }
 });
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  ng-app="app">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -86,7 +86,7 @@
 
                 <!-- FORM -->
                 <div class="col-md-6" style = "margin-top: 30px;">
-                    <div ng-app="app" ng-controller="NewUserController">
+                    <div ng-controller="NewUserController">
                         <form name="userForm" novalidate>
                             <!--NAME-->
                             <div class="form-group" show-errors='{showSuccess: true}'>
@@ -130,15 +130,16 @@
                                     <!--NAME-->
                                     <div class="form-group" show-errors='{showSuccess: true}'>
                                         <label class="control-label">Name</label>
-                                        <input type="text" class="form-control" name="cardName" ng-model="user.cardName" ng-required="user.payEmail == null && user.payPassword == null" placeholder="Card Name" />
+                                        <input type="text" class="form-control" name="cardName" ng-model="user.cardName"
+                                               ng-required="!user.payEmail.$valid || !user.payPassword.$valid" placeholder="Card Name" />
                                         <p class="help-block" ng-if="userForm.cardName.$error.required">Your name is required</p>
                                     </div>
 
                                     <!--CARD NUMBER-->
                                     <div class="form-group" show-errors='{showSuccess: true}'>
                                         <label class="control-label">Card number</label>
-                                        <input type="number" class="form-control" name="cardNumber" ng-model="user.cardnumber" ng-required="user.payEmail == null && user.payPassword == null" placeholder="Card number"
-                                               ng-minlength="16" ng-maxlength="16"/>
+                                        <input type="number" class="form-control" name="cardNumber" ng-model="user.cardNumber"
+                                               ng-required="!user.payEmail.$valid || !user.payPassword.$valid" placeholder="Card number" ng-minlength="16" ng-maxlength="16"/>
                                         <p class="help-block" ng-if="userForm.cardNumber.$error.required">A card number is required</p>
                                         <p class="help-block" ng-if="userForm.cardNumber.$error.minlength">This is not a valid card number</p>
                                         <p class="help-block" ng-if="userForm.cardNumber.$error.maxlength">This is not a valid card number</p>
@@ -151,8 +152,8 @@
                                     <!--CVC NUMBER-->
                                     <div class="form-group" show-errors='{showSuccess: true}'>
                                         <label class="control-label">Card number</label>
-                                        <input type="number" class="form-control" name="cvc" ng-model="user.cvc" ng-required="user.payEmail == null && user.payPassword == null" placeholder="CVC"
-                                               ng-minlength="3" ng-maxlength="3"/>
+                                        <input type="number" class="form-control" name="cvc" ng-model="user.cvc"
+                                               ng-required="!user.payEmail.$valid || !user.payPassword.$valid" placeholder="CVC" ng-minlength="3" ng-maxlength="3"/>
                                         <p class="help-block" ng-if="userForm.cvc.$error.required">A card number is required</p>
                                         <p class="help-block" ng-if="userForm.cvc.$error.minlength">This is not a valid card number</p>
                                         <p class="help-block" ng-if="userForm.cvc.$error.maxlength">This is not a valid card number</p>
@@ -165,7 +166,8 @@
                                     <!--PAYPAL ACCOUNT-->
                                     <div class="form-group" show-errors='{showSuccess: true}'>
                                         <label class="control-label">PayPal account email</label>
-                                        <input type="email" class="form-control" name="payEmail" ng-model="user.payEmail" ng-required="user.cardName == null && user.cardNumber == null && user.cvc == null" placeholder="Email" />
+                                        <input type="email" class="form-control" name="payEmail" ng-model="user.payEmail"
+                                               ng-required="!userForm.cardName.$valid && !userForm.cardNumber.$valid && !userForm.cvc.$valid" placeholder="Email" />
                                         <p class="help-block" ng-if="userForm.payEmail.$error.required">A PayPal account email is required</p>
                                         <p class="help-block" ng-if="userForm.payEmail.$error.email">This is not a valid email address</p>
                                     </div>
@@ -173,7 +175,8 @@
                                     <!--PAYPAL PASSWORD-->
                                     <div class="form-group" show-errors='{showSuccess: true}'>
                                         <label class="control-label">PayPal account password</label>
-                                        <input type="password" class="form-control" name="payPassword" ng-model="user.payPassword" ng-required="user.cardName == null && user.cardNumber == null && user.cvc == null" placeholder="password" />
+                                        <input type="password" class="form-control" name="payPassword" ng-model="user.payPassword"
+                                               ng-required="!user.cardName.$valid || !user.cardNumber.$valid || !user.cvc.$valid" placeholder="password" />
                                         <p class="help-block" ng-if="userForm.payPassword.$error.required">Your PayPal password is required</p>
                                     </div>
                                 </div>

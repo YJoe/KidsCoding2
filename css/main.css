@@ -20,6 +20,27 @@
     margin-bottom: 20px;
 }
 
+@media (max-width : 1000px) {
+    .boxTL {
+        margin: 20px;
+    }
+    .boxTR {
+        margin: 20px;
+    }
+    .boxBL{
+        margin: 20px;
+    }
+    .boxBR{
+        margin: 20px;
+    }
+}
+
+@media (max-width : 1000px){
+    .arrowImages{
+        display: none;
+    }
+}
+
 body {
     background-color: #fbfbfb;
     margin:0 auto;
