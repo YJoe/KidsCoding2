@@ -69,128 +69,121 @@
         <img class="img-responsive center-block" src="../images/kids3_stretch.png"
              title="Three children working together on a Kids Coding exercise" >
         <div class = "box">
-            <div class="col-md-6">
-                <h2 class="featurette-heading subHeadingText">Why Donate</h2>
-                <p class="lead bodyText">
-                    Help us give children the opportunity to learn a new skill in a fun and safe environment.
-                    A donation from you helps the charity grow and set up more locations and so allows more
-                    and more children to join the experience. If you are a member of a company that is interested
-                    in working with us to train the next generation, get in touch with us using the information below
-                    and see if we can arrange a date.
-                </p>
-                <img class="img-responsive center-block" src="../images/laptop_code.jpg"
-                     title="A laptop displaying a section of code created by Kids Coding students">
-            </div>
+            <div class = "container marketing">
 
-            <!-- FORM -->
-            <div class="col-md-6" style = "margin-top: 30px;">
-                <div ng-app="app" ng-controller="NewUserController">
-                    <form name="userForm" novalidate>
-                        <!--NAME-->
-                        <div class="form-group" show-errors='{showSuccess: true}'>
-                            <label class="control-label">Name</label>
-                            <input type="text" class="form-control" name="name" ng-model="user.name" required placeholder="Name" />
-                            <p class="help-block" ng-if="userForm.name.$error.required">Your name is required</p>
-                        </div>
+                <div class="col-md-6">
+                    <h2 class="featurette-heading subHeadingText">Why Donate</h2>
+                    <p class="lead bodyText">
+                        Help us give children the opportunity to learn a new skill in a fun and safe environment.
+                        A donation from you helps the charity grow and set up more locations and so allows more
+                        and more children to join the experience. If you are a member of a company that is interested
+                        in working with us to train the next generation, get in touch with us using the information below
+                        and see if we can arrange a date.
+                    </p>
+                    <img class="img-responsive center-block" src="../images/laptop_code.jpg"
+                         title="A laptop displaying a section of code created by Kids Coding students">
+                </div>
 
-                        <!--EMAIL-->
-                        <div class="form-group" show-errors='{showSuccess: true}'>
-                            <label class="control-label">Email</label>
-                            <input type="email" class="form-control" name="email" ng-model="user.email" required placeholder="Email" />
-                            <p class="help-block" ng-if="userForm.email.$error.required">Your email is required</p>
-                            <p class="help-block" ng-if="userForm.email.$error.email">This is not a valid email address</p>
-                        </div>
-
-                        <!--DONATION-->
-                        <div class="form-group" show-errors='{showSuccess: true}'>
-                            <label class="control-label">Donation amount</label>
-                            <input type="number" class="form-control" name="donation" ng-model="user.donation" required placeholder="Donation"
-                                   min="5"/>
-                            <p class="help-block" ng-if="userForm.donation.$error.required">A donation amount is required</p>
-                            <p class="help-block" ng-if="userForm.donation.$error.min">A minimum donation of £5 is required</p>
-                            <p class="help-block" ng-if="userForm.donation.$error.number">This is not a number</p>
-                        </div>
-
-                        <!--DONATION MESSAGE-->
-                        <div class="form-group" show-errors='{showSuccess: true}'>
-                            <label class="control-label">Donation message</label>
-                            <input type="text" class="form-control" name="message" ng-model="user.message" required placeholder="Message"/>
-                        </div>
-
-                        <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-                            <li class="active"><a href="#cred" data-toggle="tab">Credit/Debit</a></li>
-                            <li><a href="#pay" data-toggle="tab">PayPal</a></li>
-                        </ul>
-                        <div id="my-tab-content" class="tab-content">
-
-                            <!--CARD LAYOUT-->
-                            <div class="tab-pane active" id="cred">
-                                <!--NAME-->
-                                <div class="form-group" show-errors='{showSuccess: true}'>
-                                    <label class="control-label">Name</label>
-                                    <input type="text" class="form-control" name="cardName" ng-model="user.cardName" ng-required="user.payEmail == null && user.payPassword == null" placeholder="Card Name" />
-                                    <p class="help-block" ng-if="userForm.cardName.$error.required">Your name is required</p>
-                                </div>
-
-                                <!--CARD NUMBER-->
-                                <div class="form-group" show-errors='{showSuccess: true}'>
-                                    <label class="control-label">Card number</label>
-                                    <input type="number" class="form-control" name="cardNumber" ng-model="user.cardnumber" ng-required="user.payEmail == null && user.payPassword == null" placeholder="Card number"
-                                           ng-minlength="16" ng-maxlength="16"/>
-                                    <p class="help-block" ng-if="userForm.cardNumber.$error.required">A card number is required</p>
-                                    <p class="help-block" ng-if="userForm.cardNumber.$error.minlength">This is not a valid card number</p>
-                                    <p class="help-block" ng-if="userForm.cardNumber.$error.maxlength">This is not a valid card number</p>
-                                    <p class="help-block" ng-if="userForm.cardNumber.$error.number">This is not a number</p>
-                                </div>
-
-                                <!--EXPIRATION DATE-->
-
-
-                                <!--CVC NUMBER-->
-                                <div class="form-group" show-errors='{showSuccess: true}'>
-                                    <label class="control-label">Card number</label>
-                                    <input type="number" class="form-control" name="cvc" ng-model="user.cvc" ng-required="user.payEmail == null && user.payPassword == null" placeholder="CVC"
-                                           ng-minlength="3" ng-maxlength="3"/>
-                                    <p class="help-block" ng-if="userForm.cvc.$error.required">A card number is required</p>
-                                    <p class="help-block" ng-if="userForm.cvc.$error.minlength">This is not a valid card number</p>
-                                    <p class="help-block" ng-if="userForm.cvc.$error.maxlength">This is not a valid card number</p>
-                                    <p class="help-block" ng-if="userForm.cvc.$error.number">This is not a number</p>
-                                </div>
+                <!-- FORM -->
+                <div class="col-md-6" style = "margin-top: 30px;">
+                    <div ng-app="app" ng-controller="NewUserController">
+                        <form name="userForm" novalidate>
+                            <!--NAME-->
+                            <div class="form-group" show-errors='{showSuccess: true}'>
+                                <label class="control-label">Name</label>
+                                <input type="text" class="form-control" name="name" ng-model="user.name" required placeholder="Name" />
+                                <p class="help-block" ng-if="userForm.name.$error.required">Your name is required</p>
                             </div>
 
-                            <!--PAY PAL LAYOUT-->
-                            <div class="tab-pane" id="pay">
-                                <!--PAYPAL ACCOUNT-->
-                                <div class="form-group" show-errors='{showSuccess: true}'>
-                                    <label class="control-label">PayPal account email</label>
-                                    <input type="email" class="form-control" name="payEmail" ng-model="user.payEmail" ng-required="user.cardName == null && user.cardNumber == null && user.cvc == null" placeholder="Email" />
-                                    <p class="help-block" ng-if="userForm.payEmail.$error.required">A PayPal account email is required</p>
-                                    <p class="help-block" ng-if="userForm.payEmail.$error.email">This is not a valid email address</p>
+                            <!--EMAIL-->
+                            <div class="form-group" show-errors='{showSuccess: true}'>
+                                <label class="control-label">Email</label>
+                                <input type="email" class="form-control" name="email" ng-model="user.email" required placeholder="Email" />
+                                <p class="help-block" ng-if="userForm.email.$error.required">Your email is required</p>
+                                <p class="help-block" ng-if="userForm.email.$error.email">This is not a valid email address</p>
+                            </div>
+
+                            <!--DONATION-->
+                            <div class="form-group" show-errors='{showSuccess: true}'>
+                                <label class="control-label">Donation amount</label>
+                                <input type="number" class="form-control" name="donation" ng-model="user.donation" required placeholder="Donation"
+                                       min="5"/>
+                                <p class="help-block" ng-if="userForm.donation.$error.required">A donation amount is required</p>
+                                <p class="help-block" ng-if="userForm.donation.$error.min">A minimum donation of £5 is required</p>
+                                <p class="help-block" ng-if="userForm.donation.$error.number">This is not a number</p>
+                            </div>
+
+                            <!--DONATION MESSAGE-->
+                            <div class="form-group" show-errors='{showSuccess: true}'>
+                                <label class="control-label">Donation message</label>
+                                <input type="text" class="form-control" name="message" ng-model="user.message" required placeholder="Message"/>
+                            </div>
+
+                            <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                                <li class="active"><a href="#cred" data-toggle="tab">Credit/Debit</a></li>
+                                <li><a href="#pay" data-toggle="tab">PayPal</a></li>
+                            </ul>
+                            <div id="my-tab-content" class="tab-content">
+
+                                <!--CARD LAYOUT-->
+                                <div class="tab-pane active" id="cred">
+                                    <!--NAME-->
+                                    <div class="form-group" show-errors='{showSuccess: true}'>
+                                        <label class="control-label">Name</label>
+                                        <input type="text" class="form-control" name="cardName" ng-model="user.cardName" ng-required="user.payEmail == null && user.payPassword == null" placeholder="Card Name" />
+                                        <p class="help-block" ng-if="userForm.cardName.$error.required">Your name is required</p>
+                                    </div>
+
+                                    <!--CARD NUMBER-->
+                                    <div class="form-group" show-errors='{showSuccess: true}'>
+                                        <label class="control-label">Card number</label>
+                                        <input type="number" class="form-control" name="cardNumber" ng-model="user.cardnumber" ng-required="user.payEmail == null && user.payPassword == null" placeholder="Card number"
+                                               ng-minlength="16" ng-maxlength="16"/>
+                                        <p class="help-block" ng-if="userForm.cardNumber.$error.required">A card number is required</p>
+                                        <p class="help-block" ng-if="userForm.cardNumber.$error.minlength">This is not a valid card number</p>
+                                        <p class="help-block" ng-if="userForm.cardNumber.$error.maxlength">This is not a valid card number</p>
+                                        <p class="help-block" ng-if="userForm.cardNumber.$error.number">This is not a number</p>
+                                    </div>
+
+                                    <!--EXPIRATION DATE-->
+
+
+                                    <!--CVC NUMBER-->
+                                    <div class="form-group" show-errors='{showSuccess: true}'>
+                                        <label class="control-label">Card number</label>
+                                        <input type="number" class="form-control" name="cvc" ng-model="user.cvc" ng-required="user.payEmail == null && user.payPassword == null" placeholder="CVC"
+                                               ng-minlength="3" ng-maxlength="3"/>
+                                        <p class="help-block" ng-if="userForm.cvc.$error.required">A card number is required</p>
+                                        <p class="help-block" ng-if="userForm.cvc.$error.minlength">This is not a valid card number</p>
+                                        <p class="help-block" ng-if="userForm.cvc.$error.maxlength">This is not a valid card number</p>
+                                        <p class="help-block" ng-if="userForm.cvc.$error.number">This is not a number</p>
+                                    </div>
                                 </div>
 
-                                <!--PAYPAL PASSWORD-->
-                                <div class="form-group" show-errors='{showSuccess: true}'>
-                                    <label class="control-label">PayPal account password</label>
-                                    <input type="password" class="form-control" name="payPassword" ng-model="user.payPassword" ng-required="user.cardName == null && user.cardNumber == null && user.cvc == null" placeholder="password" />
-                                    <p class="help-block" ng-if="userForm.payPassword.$error.required">Your PayPal password is required</p>
+                                <!--PAY PAL LAYOUT-->
+                                <div class="tab-pane" id="pay">
+                                    <!--PAYPAL ACCOUNT-->
+                                    <div class="form-group" show-errors='{showSuccess: true}'>
+                                        <label class="control-label">PayPal account email</label>
+                                        <input type="email" class="form-control" name="payEmail" ng-model="user.payEmail" ng-required="user.cardName == null && user.cardNumber == null && user.cvc == null" placeholder="Email" />
+                                        <p class="help-block" ng-if="userForm.payEmail.$error.required">A PayPal account email is required</p>
+                                        <p class="help-block" ng-if="userForm.payEmail.$error.email">This is not a valid email address</p>
+                                    </div>
+
+                                    <!--PAYPAL PASSWORD-->
+                                    <div class="form-group" show-errors='{showSuccess: true}'>
+                                        <label class="control-label">PayPal account password</label>
+                                        <input type="password" class="form-control" name="payPassword" ng-model="user.payPassword" ng-required="user.cardName == null && user.cardNumber == null && user.cvc == null" placeholder="password" />
+                                        <p class="help-block" ng-if="userForm.payPassword.$error.required">Your PayPal password is required</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <button class="btn btn-primary" style = "margin: 10px" ng-click="save()">Donate</button>
-                        <button class="btn btn-primary" style = "margin: 10px" ng-click="reset()">Clear form</button>
-                    </form>
+                            <button class="btn btn-primary" style = "margin: 10px" ng-click="save()">Donate</button>
+                            <button class="btn btn-primary" style = "margin: 10px" ng-click="reset()">Clear form</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-
-            <!--
-            <p class="bodyText">
-                Contact Email: <a href="mailto:KC.enquiries@homail.com">KC.enquiries@homail.com</a>
-            </p>
-            <p class="bodyText">
-                Phone: <a href="tel:+44118 872 2345">0118 872 2345</a><br />
-            </p>
-            -->
-            <!--<hr class="featurette-divider featurette-divider-color">-->
 
         </div>
     </div>
