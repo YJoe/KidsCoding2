@@ -15,6 +15,7 @@ body {
 }
 
 .box{
+    padding: 20px;
     margin-bottom: 20px;
     background-color: #fbfbfb;
     box-shadow: 0px 3px 5px 1px silver;
@@ -78,7 +79,7 @@ img.boarder {
 
 /* TEXT */
 .bodyText{
-    margin: 30px;
+    margin-bottom: 30px;
     margin-top: 0;
     font-family: "Roboto";
     text-align: justify;
@@ -106,7 +107,7 @@ img.boarder {
 }
 
 .subHeadingText{
-    margin: 30px;
+    margin-bottom: 30px;
     font-family: "Roboto-Bold";
     font-size: 30px;
     color: #65bfcc;
