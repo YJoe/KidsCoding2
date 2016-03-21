@@ -1,0 +1,14 @@
+@media only screen and (max-width : 500px) {
+    .boxTL {
+        margin: 10px;
+    }
+    .boxTR {
+        margin: 10px;
+    }
+    .boxBL{
+        margin: 10px;
+    }
+    .boxBR{
+        margin: 10px;
+    }
+}
