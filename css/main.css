@@ -60,6 +60,15 @@
     }
 }
 
+.formfix{
+    width: 90%;
+}
+
+@media (max-width: 1000px) {
+    .formfix {
+        width: 90%
+    }
+}
 
 body {
     background-color: #fbfbfb;
