@@ -20,6 +20,27 @@
     margin-bottom: 20px;
 }
 
+.boxPSC{
+    padding: 10px;
+    background-color: #fbfbfb;
+    box-shadow: 0 0 30px 0 rgba(50, 50, 50, 0.5);
+}
+
+@media (max-width : 1000px){
+    .arrowImages{
+        display: none;
+    }
+}
+
+.boxL{
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.boxR{
+    margin: 20px;
+}
+
 @media (max-width : 1000px) {
     .boxTL {
         margin: 20px;
@@ -33,13 +54,12 @@
     .boxBR{
         margin: 20px;
     }
-}
 
-@media (max-width : 1000px){
-    .arrowImages{
-        display: none;
+    .boxL{
+        margin: 20px;
     }
 }
+
 
 body {
     background-color: #fbfbfb;
