@@ -305,3 +305,8 @@ img.boarder {
     float: right;
     width: 50%;
 }
+
+.wrapword{
+    white-space: normal;
+    word-break: break-all;
+}
