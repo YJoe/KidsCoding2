@@ -204,7 +204,7 @@ img.boarder {
     display: inline-block;
     width: 20px;
     height: 20px;
-    margin: 10px;
+    margin: 0;
     text-indent: 0;
     cursor: pointer;
     border: none;
@@ -215,19 +215,19 @@ img.boarder {
 .carousel-indicators .active {
     width: 22px;
     height: 22px;
-    margin: 10px;
+    margin: 0;
     background-color: #65bfcc;
 }
 
 .carousel-control.left, .carousel-control.right {
-    background-image: none
+    background-image: none;
 }
 
 .carousel-inner .item > img {
     top: 0;
     left: 0;
     min-width: 10%;
-    height: 410px;
+    height: 100%;
 }
 
 /* Images Home page */
@@ -357,6 +357,8 @@ img.boarder {
 }
 
 .wrapword{
+    word-wrap: break-word;
     white-space: normal;
     word-break: break-all;
+    overflow: hidden;
 }
