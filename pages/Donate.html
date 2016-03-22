@@ -55,8 +55,6 @@
             display: block;
         }
     </style>
-
-
 </head>
 
 
@@ -163,21 +161,15 @@
                                         number</p>
                                 </div>
 
-                                <!--EXPIRATION DATE-->
-
-
                                 <!--CVC NUMBER-->
                                 <div class="form-group" show-errors='{showSuccess: true}'>
-                                    <label class="control-label">Card number</label>
+                                    <label class="control-label">CVC number</label>
                                     <input type="number" class="form-control" name="cvc" ng-model="user.cvc"
                                            ng-required="!user.payEmail.$valid || !user.payPassword.$valid"
                                            placeholder="CVC" ng-minlength="3" ng-maxlength="3"/>
-                                    <p class="help-block" ng-if="userForm.cvc.$error.required">A card number is
-                                        required</p>
-                                    <p class="help-block" ng-if="userForm.cvc.$error.minlength">This is not a valid card
-                                        number</p>
-                                    <p class="help-block" ng-if="userForm.cvc.$error.maxlength">This is not a valid card
-                                        number</p>
+                                    <p class="help-block" ng-if="userForm.cvc.$error.required">A card number is required</p>
+                                    <p class="help-block" ng-if="userForm.cvc.$error.minlength">This is not a valid cvc number</p>
+                                    <p class="help-block" ng-if="userForm.cvc.$error.maxlength">This is not a valid cvc number</p>
                                     <p class="help-block" ng-if="userForm.cvc.$error.number">This is not a number</p>
                                 </div>
                             </div>
@@ -201,7 +193,7 @@
                                     <label class="control-label">PayPal account password</label>
                                     <input type="password" class="form-control" name="payPassword"
                                            ng-model="user.payPassword"
-                                           ng-required="!user.cardName.$valid || !user.cardNumber.$valid || !user.cvc.$valid"
+                                           ng-required="!userForm.cardName.$valid && !userForm.cardNumber.$valid && !userForm.cvc.$valid"
                                            placeholder="password"/>
                                     <p class="help-block" ng-if="userForm.payPassword.$error.required">Your PayPal
                                         password is required</p>
