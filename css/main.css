@@ -176,7 +176,7 @@ img.boarder {
 .menuText{
     font-family: "Arial";
     font-size: 18px;
-    color: #000000;
+    color: #fbfbfb;
 }
 
 /*Carousel*/
@@ -205,21 +205,10 @@ img.boarder {
     margin: 0;
     background-color: #65bfcc;
 }
-.carousel-control.right{
-}
 
-.carousel-control.left{
-    left: 75%
-
-}
-
-.right{
-    right: 0;
-}
 .carousel-control.left, .carousel-control.right {
     background-image: none;
-    position: absolute;
-    top: 0;
+
 }
 
 .carousel-inner .item > img {
