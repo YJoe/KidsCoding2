@@ -74,13 +74,13 @@
             <!-- FORM -->
             <div class="col-md-6" style="margin-top: 30px; ">
                 <div ng-controller="NewUserController">
-                    <form name="userForm" class="formfix" novalidate>
+                    <form name="donateForm" class="formfix" novalidate>
                         <!--NAME-->
                         <div class="form-group" show-errors='{showSuccess: true}'>
                             <label class="control-label">Name</label>
                             <input type="text" class="form-control" name="name" ng-model="user.name" required
                                    placeholder="Name"/>
-                            <p class="help-block" ng-if="userForm.name.$error.required">Your name is required</p>
+                            <p class="help-block" ng-if="donateForm.name.$error.required">Your name is required</p>
                         </div>
 
                         <!--EMAIL-->
@@ -88,8 +88,8 @@
                             <label class="control-label">Email</label>
                             <input type="email" class="form-control" name="email" ng-model="user.email" required
                                    placeholder="Email"/>
-                            <p class="help-block" ng-if="userForm.email.$error.required">Your email is required</p>
-                            <p class="help-block" ng-if="userForm.email.$error.email">This is not a valid email
+                            <p class="help-block" ng-if="donateForm.email.$error.required">Your email is required</p>
+                            <p class="help-block" ng-if="donateForm.email.$error.email">This is not a valid email
                                 address</p>
                         </div>
 
@@ -99,11 +99,11 @@
                             <input type="number" class="form-control" name="donation" ng-model="user.donation" required
                                    placeholder="Donation"
                                    min="5"/>
-                            <p class="help-block" ng-if="userForm.donation.$error.required">A donation amount is
+                            <p class="help-block" ng-if="donateForm.donation.$error.required">A donation amount is
                                 required</p>
-                            <p class="help-block" ng-if="userForm.donation.$error.min">A minimum donation of £5 is
+                            <p class="help-block" ng-if="donateForm.donation.$error.min">A minimum donation of £5 is
                                 required</p>
-                            <p class="help-block" ng-if="userForm.donation.$error.number">This is not a number</p>
+                            <p class="help-block" ng-if="donateForm.donation.$error.number">This is not a number</p>
                         </div>
 
                         <!--DONATION MESSAGE-->
@@ -127,7 +127,7 @@
                                     <input type="text" class="form-control" name="cardName" ng-model="user.cardName"
                                            ng-required="!user.payEmail.$valid || !user.payPassword.$valid"
                                            placeholder="Card Name"/>
-                                    <p class="help-block" ng-if="userForm.cardName.$error.required">Your name is
+                                    <p class="help-block" ng-if="donateForm.cardName.$error.required">Your name is
                                         required</p>
                                 </div>
 
@@ -138,13 +138,13 @@
                                            ng-model="user.cardNumber"
                                            ng-required="!user.payEmail.$valid || !user.payPassword.$valid"
                                            placeholder="Card number" ng-minlength="16" ng-maxlength="16"/>
-                                    <p class="help-block" ng-if="userForm.cardNumber.$error.required">A card number is
+                                    <p class="help-block" ng-if="donateForm.cardNumber.$error.required">A card number is
                                         required</p>
-                                    <p class="help-block" ng-if="userForm.cardNumber.$error.minlength">This is not a
+                                    <p class="help-block" ng-if="donateForm.cardNumber.$error.minlength">This is not a
                                         valid card number</p>
-                                    <p class="help-block" ng-if="userForm.cardNumber.$error.maxlength">This is not a
+                                    <p class="help-block" ng-if="donateForm.cardNumber.$error.maxlength">This is not a
                                         valid card number</p>
-                                    <p class="help-block" ng-if="userForm.cardNumber.$error.number">This is not a
+                                    <p class="help-block" ng-if="donateForm.cardNumber.$error.number">This is not a
                                         number</p>
                                 </div>
 
@@ -154,10 +154,10 @@
                                     <input type="number" class="form-control" name="cvc" ng-model="user.cvc"
                                            ng-required="!user.payEmail.$valid || !user.payPassword.$valid"
                                            placeholder="CVC" ng-minlength="3" ng-maxlength="3"/>
-                                    <p class="help-block" ng-if="userForm.cvc.$error.required">A card number is required</p>
-                                    <p class="help-block" ng-if="userForm.cvc.$error.minlength">This is not a valid cvc number</p>
-                                    <p class="help-block" ng-if="userForm.cvc.$error.maxlength">This is not a valid cvc number</p>
-                                    <p class="help-block" ng-if="userForm.cvc.$error.number">This is not a number</p>
+                                    <p class="help-block" ng-if="donateForm.cvc.$error.required">A card number is required</p>
+                                    <p class="help-block" ng-if="donateForm.cvc.$error.minlength">This is not a valid cvc number</p>
+                                    <p class="help-block" ng-if="donateForm.cvc.$error.maxlength">This is not a valid cvc number</p>
+                                    <p class="help-block" ng-if="donateForm.cvc.$error.number">This is not a number</p>
                                 </div>
                             </div>
 
@@ -167,11 +167,11 @@
                                 <div class="form-group" show-errors='{showSuccess: true}'>
                                     <label class="control-label">PayPal account email</label>
                                     <input type="email" class="form-control" name="payEmail" ng-model="user.payEmail"
-                                           ng-required="!userForm.cardName.$valid && !userForm.cardNumber.$valid && !userForm.cvc.$valid"
+                                           ng-required="!donateForm.cardName.$valid && !donateForm.cardNumber.$valid && !donateForm.cvc.$valid"
                                            placeholder="Email"/>
-                                    <p class="help-block" ng-if="userForm.payEmail.$error.required">A PayPal account
+                                    <p class="help-block" ng-if="donateForm.payEmail.$error.required">A PayPal account
                                         email is required</p>
-                                    <p class="help-block" ng-if="userForm.payEmail.$error.email">This is not a valid
+                                    <p class="help-block" ng-if="donateForm.payEmail.$error.email">This is not a valid
                                         email address</p>
                                 </div>
 
@@ -180,15 +180,15 @@
                                     <label class="control-label">PayPal account password</label>
                                     <input type="password" class="form-control" name="payPassword"
                                            ng-model="user.payPassword"
-                                           ng-required="!userForm.cardName.$valid && !userForm.cardNumber.$valid && !userForm.cvc.$valid"
+                                           ng-required="!donateForm.cardName.$valid && !donateForm.cardNumber.$valid && !donateForm.cvc.$valid"
                                            placeholder="password"/>
-                                    <p class="help-block" ng-if="userForm.payPassword.$error.required">Your PayPal
+                                    <p class="help-block" ng-if="donateForm.payPassword.$error.required">Your PayPal
                                         password is required</p>
                                 </div>
                             </div>
                         </div>
-                        <button class="btn btn-primary" style="margin: 10px" ng-click="save()">Donate</button>
-                        <button class="btn btn-primary" style="margin: 10px" ng-click="reset()">Clear form</button>
+                        <button class="btn btn-primary" style="margin: 10px" ng-click="save(0)">Donate</button>
+                        <button class="btn btn-primary" style="margin: 10px" ng-click="reset(0)">Clear form</button>
                     </form>
                 </div>
             </div>

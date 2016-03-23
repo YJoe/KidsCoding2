@@ -138,12 +138,12 @@
 
                     <div class = "col-md-5" style="margin: 30px">
                         <div ng-app="app" ng-controller="NewUserController">
-                            <form name="userForm" novalidate>
+                            <form name="volForm" novalidate>
                                 <!--NAME-->
                                 <div class="form-group" show-errors='{showSuccess: true}'>
                                     <label class="control-label">Name</label>
                                     <input type="text" class="form-control" name="name" ng-model="user.name" required placeholder="Name" />
-                                    <p class="help-block" ng-if="userForm.name.$error.required">Your name is required</p>
+                                    <p class="help-block" ng-if="volForm.name.$error.required">Your name is required</p>
                                 </div>
 
                                 <!--AGE-->
@@ -151,16 +151,16 @@
                                     <label class="control-label">Age</label>
                                     <input type="number" class="form-control" name="age" ng-model="user.age" required placeholder="Age"
                                            min="16"/>
-                                    <p class="help-block" ng-if="userForm.age.$error.required">You must specify your age</p>
-                                    <p class="help-block" ng-if="userForm.age.$error.min">You must be 16 or over to volunteer</p>
-                                    <p class="help-block" ng-if="userForm.age.$error.number">This is not a number</p>
+                                    <p class="help-block" ng-if="volForm.age.$error.required">You must specify your age</p>
+                                    <p class="help-block" ng-if="volForm.age.$error.min">You must be 16 or over to volunteer</p>
+                                    <p class="help-block" ng-if="volForm.age.$error.number">This is not a number</p>
                                 </div>
 
                                 <!--OCCUPATION-->
                                 <div class="form-group" show-errors='{showSuccess: true}'>
                                     <label class="control-label">Current occupation</label>
                                     <input type="text" class="form-control" name="occupation" ng-model="user.occupation" required placeholder="Occupation" />
-                                    <p class="help-block" ng-if="userForm.occupation.$error.required">Your occupation is required (i.e Unemployed, Student, Programmer)</p>
+                                    <p class="help-block" ng-if="volForm.occupation.$error.required">Your occupation is required (i.e Unemployed, Student, Programmer)</p>
                                 </div>
 
                                 <!--PHONE-->
@@ -168,18 +168,18 @@
                                     <label class="control-label">Phone number</label>
                                     <input type="number" class="form-control" name="phone" ng-model="user.phone" required placeholder="phone"
                                            ng-minlength="11" ng-maxlength="11"/>
-                                    <p class="help-block" ng-if="userForm.phone.$error.required">A phone number is required</p>
-                                    <p class="help-block" ng-if="userForm.phone.$error.minlength">This is not a valid phone number</p>
-                                    <p class="help-block" ng-if="userForm.phone.$error.maxlength">This is not a valid phone number</p>
-                                    <p class="help-block" ng-if="userForm.phone.$error.number">This is not a number</p>
+                                    <p class="help-block" ng-if="volForm.phone.$error.required">A phone number is required</p>
+                                    <p class="help-block" ng-if="volForm.phone.$error.minlength">This is not a valid phone number</p>
+                                    <p class="help-block" ng-if="volForm.phone.$error.maxlength">This is not a valid phone number</p>
+                                    <p class="help-block" ng-if="volForm.phone.$error.number">This is not a number</p>
                                 </div>
 
                                 <!--EMAIL-->
                                 <div class="form-group" show-errors='{showSuccess: true}'>
                                     <label class="control-label">Email</label>
                                     <input type="email" class="form-control" name="email" ng-model="user.email" required placeholder="Email" />
-                                    <p class="help-block" ng-if="userForm.email.$error.required">Your email is required</p>
-                                    <p class="help-block" ng-if="userForm.email.$error.email">This is not a valid email address</p>
+                                    <p class="help-block" ng-if="volForm.email.$error.required">Your email is required</p>
+                                    <p class="help-block" ng-if="volForm.email.$error.email">This is not a valid email address</p>
                                 </div>
 
                                 <!--ADDRESS-->
@@ -187,7 +187,7 @@
                                 <div class="form-group" show-errors='{showSuccess: true}'>
                                     <label class="control-label">Address line 1</label>
                                     <input type="text" class="form-control" name="addressLine1" ng-model="user.addressLine1" required placeholder="Address line 1" />
-                                    <p class="help-block" ng-if="userForm.addressLine1.$error.required">Your address is required</p>
+                                    <p class="help-block" ng-if="volForm.addressLine1.$error.required">Your address is required</p>
                                 </div>
 
                                 <!--ADDRESS LINE-->
@@ -206,21 +206,21 @@
                                 <div class="form-group" show-errors='{showSuccess: true}'>
                                     <label class="control-label">Town/City</label>
                                     <input type="text" class="form-control" name="townCity" ng-model="user.townCity" required placeholder="Town/City" />
-                                    <p class="help-block" ng-if="userForm.townCity.$error.required">Your town/city name is required</p>
+                                    <p class="help-block" ng-if="volForm.townCity.$error.required">Your town/city name is required</p>
                                 </div>
 
                                 <!--COUNTY-->
                                 <div class="form-group" show-errors='{showSuccess: true}'>
                                     <label class="control-label">County</label>
                                     <input type="text" class="form-control" name="county" ng-model="user.county" required placeholder="County" />
-                                    <p class="help-block" ng-if="userForm.county.$error.required">Your county is required</p>
+                                    <p class="help-block" ng-if="volForm.county.$error.required">Your county is required</p>
                                 </div>
 
                                 <!--POST CODE-->
                                 <div class="form-group" show-errors='{showSuccess: true}'>
                                     <label class="control-label">Post code</label>
                                     <input type="text" class="form-control" name="postCode" ng-model="user.addressLine1" required placeholder="Post code" />
-                                    <p class="help-block" ng-if="userForm.postCode.$error.required">Your post code is required</p>
+                                    <p class="help-block" ng-if="volForm.postCode.$error.required">Your post code is required</p>
                                 </div>
 
                                 <!--UPLOADS-->
@@ -242,8 +242,8 @@
                                     </div>
                                 </div>
 
-                            <button class="btn btn-primary" style="margin-bottom: 20px" ng-click="save()">Volunteer</button>
-                            <button class="btn btn-primary" style="margin-bottom: 20px" ng-click="reset()">Clear form</button>
+                            <button class="btn btn-primary" style="margin-bottom: 20px" ng-click="save(1)">Volunteer</button>
+                            <button class="btn btn-primary" style="margin-bottom: 20px" ng-click="reset(1)">Clear form</button>
                         </form>
                     </div>
                 </div>

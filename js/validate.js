@@ -74,6 +74,7 @@ module.provider('showErrorsConfig', function () {
     };
 });
 
+
 module.controller('NewUserController', function($scope) {
     $scope.cardName = "";
     $scope.cardNumber = "";
@@ -82,30 +83,36 @@ module.controller('NewUserController', function($scope) {
     $scope.payEmail = "";
     $scope.payPassword = "";
 
-    $scope.cond = (($scope.cardName != "" && $scope.cardNumber != "" && $scope.cvc != "") || ($scope.payEmail != "" && $scope.payPassword != ""));
-
     $scope.user= {};
 
-    $scope.save = function() {
-        //$scope.$broadcast('show-errors-check-validity');
-        console.log("clicked");
-        console.log($scope.userForm.cardName.$valid);
-        console.log($scope.userForm.cardNumber.$valid);
-        console.log($scope.userForm.cvc.$valid);
-        console.log($scope.userForm.payEmail.$valid);
-        console.log($scope.userForm.payPassword.$valid);
+    $scope.save = function(formFlag) {
+        if(formFlag == 0) {
 
-        if (($scope.userForm.cardName.$valid && $scope.userForm.cardNumber.$valid && $scope.userForm.cvc.$valid)
-            || ($scope.userForm.payEmail.$valid && $scope.userForm.payPassword.$valid)) {
-            alert('User saved');
-            $scope.reset();
+            if (($scope.donateForm.cardName.$valid && $scope.donateForm.cardNumber.$valid && $scope.donateForm.cvc.$valid)
+                || ($scope.donateForm.payEmail.$valid && $scope.donateForm.payPassword.$valid)) {
+                alert('User saved');
+                $scope.reset(0);
+            }
+        } else {
+            if ($scope.donateForm.$valid) {
+                alert('User saved');
+                $scope.reset(formFlag);
+            }
         }
     };
 
-    $scope.reset = function() {
-        $scope.userForm = { name: '', email: '', donation: '', message: ''};
+    $scope.reset = function(formFlag) {
+        if(formFlag == 0) {
+            $scope.$broadcast('show-errors-reset');
+            $scope.user = { name: '', email: '', donation: '', message: '',
+                            cardName: '', cardNumber: '', cvc: '',
+                            payEmail: '', payPassword: ''};
+
+        } else{
+            $scope.$broadcast('show-errors-reset');
+            $scope.user = { name: '', age: '', occupation: '', phone: '',
+                            email: '', address1: '', address2: '',
+                            address3: '', town: '', county: '', postCode: ''};
+        }
     }
 });
-
-
-                
