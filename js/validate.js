@@ -90,12 +90,12 @@ module.controller('NewUserController', function($scope) {
 
             if (($scope.donateForm.cardName.$valid && $scope.donateForm.cardNumber.$valid && $scope.donateForm.cvc.$valid)
                 || ($scope.donateForm.payEmail.$valid && $scope.donateForm.payPassword.$valid)) {
-                alert('User saved');
+                alert('Thank you for your donation!');
                 $scope.reset(0);
             }
         } else {
-            if ($scope.donateForm.$valid) {
-                alert('User saved');
+            if ($scope.volForm.$valid) {
+                alert('Thank you for submitting your volunteer application !');
                 $scope.reset(formFlag);
             }
         }
